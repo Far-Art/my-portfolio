@@ -1,0 +1,12 @@
+.Info{
+    max-width: 500px;
+}
+
+.Info > p {
+    color: rgb(60, 60, 60);
+    margin: auto;
+    padding: 0;
+    text-align: center;
+    font-size: 110%;
+	font-weight: 300;
+}
