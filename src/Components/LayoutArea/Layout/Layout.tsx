@@ -1,14 +1,19 @@
 import Header from "../Header/Header";
 import Info from "../Info/Info";
-import ProjectsContainer from "../ProjectsContainer/ProjectsContainer";
+import Main from "../Main/Main";
+import Skills from "../Skills/Skills";
+import SocialMedia from "../SocialMedia/SocialMedia";
 import "./Layout.css";
+
 
 function Layout(): JSX.Element {
     return (
         <div className="Layout">
 			<Header />
+            <SocialMedia/>
             <Info />
-            <ProjectsContainer />
+            <Main />
+            <Skills />
         </div>
     );
 }

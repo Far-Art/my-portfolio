@@ -1,0 +1,52 @@
+.Skills > * {
+    transition: 1.5s;
+}
+
+.Skills {
+    width: 400px;
+    height: auto;
+    border-radius: 100px;
+    user-select: none;
+}
+
+.Skills > p {
+    font-size: 115%;
+    color: rgb(78, 78, 78);
+}
+
+.Skills > .twoDimensional {
+	display: flex;
+    flex-direction: row;
+    border-radius: 100px;
+}
+
+.Skills > .twoDimensional > ul {
+    user-select: text;
+	margin: auto;
+    padding: 10px;
+    list-style: none;
+    color: rgb(78, 78, 78);
+}
+
+.Skills > .twoDimensional > ul > li::before {
+    content: "\2022";
+    color: rgb(153, 18, 81);
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    padding: 0;
+    margin-left: auto;
+}
+
+.Skills > h2 {
+    color: rgb(60, 60, 60);
+}
+
+.Skills:hover .twoDimensional{
+    box-shadow: 
+    7px 7px 25px rgba(0,0,0,0.05), 
+    -15px -15px 25px rgba(255,255,255,0.3),
+    inset -4px -4px 8px 0 rgba(255,255,255,0.3),
+    inset 4px 4px 10px 0 rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}

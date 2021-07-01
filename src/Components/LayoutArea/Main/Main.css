@@ -1,0 +1,19 @@
+.Main{
+	margin-top: 5vh;
+	user-select: none;
+}
+
+.Main, .Main > *{
+	justify-content: center;
+	justify-items: center;
+	align-items: center; 
+    align-content: center;
+}
+
+.Main > .ProjectsContainer {
+	margin: 2.5vh;
+}
+
+.Main > h2 {
+	color: rgb(60, 60, 60);
+}

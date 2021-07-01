@@ -19,9 +19,11 @@ code {
 }
 
 #root{
+  overflow: auto;
   background-image: linear-gradient(-45deg,#d9ecf4,#e7e3f4,#d0ecf6,#eaecec,#f8e4e4);
   height: 100vh;
   width: 100vw;
   height: 100%;
   position: fixed;
+  text-align: center;
 }

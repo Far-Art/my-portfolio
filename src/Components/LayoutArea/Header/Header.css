@@ -16,4 +16,5 @@
     position: relative;
     top: -1.5vh;
     color: rgb(60, 60, 60);
+    user-select: none;
 }
