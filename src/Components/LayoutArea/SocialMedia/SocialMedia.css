@@ -1,4 +1,4 @@
-.SocialMedia, .SocialMedia > a {
+.SocialMedia, .SocialMedia > div > a {
     transition: 0.3s;
 }
 
@@ -7,13 +7,41 @@
     padding: 20px;
 }
 
-.SocialMedia > a {
+.SocialMedia > div {
+    display: inline;
     width: 30px;
-    color: aliceblue;
-    text-decoration: none;
     padding-bottom: 2vh;
     margin: auto 30px;
     padding: 7px;
+    border-radius: 20px;
+}
+
+.SocialMedia > div > span{
+    z-index: 2;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    font-weight: 800;
+    color: rgb(60, 60, 60);
+    padding: 3px 10px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.05);
+    transform: translateX(-25px);
+    user-select: none;
+    opacity: 0;
+    pointer-events: none; /* this also disables JS */
+    transition: 0.2s;
+}
+
+.SocialMedia > div:hover > span{
+    transform: translateX(20px);
+    opacity: 1;
+}
+
+.SocialMedia > div > a {
+    width: inherit;
+    color: aliceblue;
+    text-decoration: none;
+    padding: inherit;
     transform: scale(150%);
     border-radius: 20px;
     background-color: rgba(133, 56, 83, 0.5);
@@ -24,7 +52,7 @@
         inset 4px 4px 10px 0 rgba(0, 0, 0, 0.05);
 }
 
-.SocialMedia > a:hover{
+.SocialMedia > div > a:hover{
     background-color: rgba(233, 21, 95, 0.8);
     transform: scale(180%);
     box-shadow: 

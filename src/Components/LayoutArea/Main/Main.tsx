@@ -1,6 +1,8 @@
 import ProjectsContainer from "../ProjectsContainer/ProjectsContainer";
 import "./Main.css";
 import projectImg from '../../../Assets/Images/art-burger-preview.jpg';
+import projectImg2 from '../../../Assets/Images/messi.jpg';
+
 
 function Main(): JSX.Element {
     return (
@@ -14,8 +16,8 @@ function Main(): JSX.Element {
             />
             <ProjectsContainer 
                 name="The Best Player" 
-                image={projectImg} 
-                link="https://artburger.herokuapp.com/"
+                image={projectImg2} 
+                link="https://best-player-itw.herokuapp.com/"
                 disabled={false} 
             />
             <ProjectsContainer 
