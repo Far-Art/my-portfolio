@@ -3,9 +3,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+} 
 
-.Header > h1 {
+.Header h1 {
     margin-top: 2vh;
     font-size: 400%;
     color: rgba(255,255,255,0.7);
@@ -17,4 +17,14 @@
     top: -1.5vh;
     color: rgb(60, 60, 60);
     user-select: none;
+}
+
+@media (max-width: 600px){
+    .Header > h1 {
+        font-size: 270%;
+    }
+
+    .Header > h2 {
+        font-size: 120%;
+    }
 }

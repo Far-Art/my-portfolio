@@ -61,6 +61,8 @@
 .ProjectsContainer:hover{
     background-color: aliceblue;
     transform: scale(120%);
+    -webkit-transform:scale(120%);
+    -ms-transform:scale(120%);
     box-shadow: 35px 50px 7px 0 rgba(0,0,0,0.1), 0px 0px 0px rgba(255, 255, 255, 0.3);
 }
 
@@ -68,6 +70,8 @@
     opacity: 0%;
     user-select: none;
     transform: scale(30%);
+    -webkit-transform:scale(30%);
+    -ms-transform:scale(30%);
 }
 
 /**********************
@@ -115,4 +119,48 @@
 
 .disabled:hover .text > h2{
     opacity: 0;
+}
+
+@media (max-width: 600px) and (pointer: coarse) and (hover: none) {
+    .ProjectsContainer {
+        width: 300px;
+        height: 100px;
+        touch-action: none;
+    }
+    
+    .ProjectsContainer:hover {
+        transform: none;
+        -webkit-transform: none;
+        -ms-transform:none;
+        box-shadow: inherit;
+        touch-action: none;
+    }
+
+    .ProjectsContainer:hover > img {
+        /* border-radius: 0; */
+    }
+
+    .ProjectsContainer > .text {
+        font-size: 150%;
+        transform: none;
+        -webkit-transform: none;
+        -ms-transform: none;
+    }
+
+    .disabled:hover .text > p, .disabled:hover .text > h2 {
+        font-size: 100%;
+        transform: none;
+        -webkit-transform: none;
+        -ms-transform: none;
+    }
+
+    .disabled > img{
+        transform: none;
+        -webkit-transform: none;
+        -ms-transform: none;
+    }
+    
+    .disabled:hover img{
+        width: 100%;
+    }
 }

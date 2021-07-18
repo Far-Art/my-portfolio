@@ -7,5 +7,10 @@
 			"path": "..\\art-burger"
 		}
 	],
-	"settings": {}
+	"settings": {},
+	"extensions": {
+		"recommendations": [
+			"coenraads.bracket-pair-colorizer"
+		]
+	}
 }
