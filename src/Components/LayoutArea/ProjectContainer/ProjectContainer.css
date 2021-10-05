@@ -1,55 +1,61 @@
-.ProjectsContainer, .disabled, .disabled > *, .ProjectsContainer > * , .text , .text > * {
+.ProjectContainer,
+.disabled,
+.disabled > *,
+.ProjectContainer > *,
+.text,
+.text > * {
     transition: 0.4s;
 }
 
-.ProjectsContainer > * , .text , .text > * {
+.ProjectContainer > *,
+.text,
+.text > * {
     grid-area: 1 / 1 / 2 / 2;
     font-weight: 100;
     white-space: nowrap;
-    text-shadow: 0 0 20px rgba(0,0,0,0.5),0 0 7px rgba(0,0,0,0.2);
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 7px rgba(0, 0, 0, 0.2);
 }
 
-.ProjectsContainer {
+.ProjectContainer {
     display: grid;
-	border-radius: 150px;
+    border-radius: 150px;
     overflow: hidden;
     width: 500px;
     height: 150px;
-    box-shadow: 
-        7px 7px 40px rgba(0,0,0,0.15), 
-        -15px -15px 20px rgba(255,255,255,0.5),
+    box-shadow: 7px 7px 40px rgba(0, 0, 0, 0.15),
+        -15px -15px 20px rgba(255, 255, 255, 0.5),
         inset -4px -4px 8px 0 rgba(255, 255, 255, 0.5),
         inset 4px 4px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
-.ProjectsContainer > a {
+.ProjectContainer > a {
     z-index: 2;
     width: 100%;
     height: 100%;
     border-radius: inherit;
 }
 
-.ProjectsContainer > img {
+.ProjectContainer > img {
     width: inherit;
     height: inherit;
     margin: auto;
-    filter:blur(5px);
+    filter: blur(5px);
     opacity: 50%;
     z-index: 0;
     border-radius: inherit;
     object-fit: cover;
 }
 
-.ProjectsContainer:hover img{
+.ProjectContainer:hover img {
     opacity: 100%;
-    filter:none;
+    filter: none;
     transition: 0.5s;
     border-radius: 0;
     object-fit: cover;
     width: 60%;
 }
 
-.ProjectsContainer > .text {
+.ProjectContainer > .text {
     z-index: 1;
     padding: 0;
     margin: auto;
@@ -58,20 +64,21 @@
     font-size: 250%;
 }
 
-.ProjectsContainer:hover{
+.ProjectContainer:hover {
     background-color: aliceblue;
     transform: scale(120%);
-    -webkit-transform:scale(120%);
-    -ms-transform:scale(120%);
-    box-shadow: 35px 50px 7px 0 rgba(0,0,0,0.1), 0px 0px 0px rgba(255, 255, 255, 0.3);
+    -webkit-transform: scale(120%);
+    -ms-transform: scale(120%);
+    box-shadow: 35px 50px 7px 0 rgba(0, 0, 0, 0.1),
+        0px 0px 0px rgba(255, 255, 255, 0.3);
 }
 
-.ProjectsContainer:hover .text{
+.ProjectContainer:hover .text {
     opacity: 0%;
     user-select: none;
     transform: scale(30%);
-    -webkit-transform:scale(30%);
-    -ms-transform:scale(30%);
+    -webkit-transform: scale(30%);
+    -ms-transform: scale(30%);
 }
 
 /**********************
@@ -79,37 +86,37 @@
 ***********************/
 
 /* disable link */
-.disabled > a{
+.disabled > a {
     width: 0;
     height: 0;
 }
 
-.disabled{
+.disabled {
     cursor: not-allowed;
     background-color: rgb(140, 133, 146);
 }
 
-.disabled > img{
+.disabled > img {
     transform: scale(140%);
 }
 
-.disabled:hover img{
+.disabled:hover img {
     width: 100%;
     transform: scale(100%);
     background-color: rgb(77, 66, 87);
     /* transition: 1.5s; */
 }
 
-.disabled .text > p{
+.disabled .text > p {
     font-size: 80%;
     color: rgb(43, 43, 43);
 }
 
-.disabled:hover .text > p{
+.disabled:hover .text > p {
     font-weight: 900;
     font-size: 150%;
     transform: translateY(-50%);
-    text-shadow: 0 0 15px rgba(0,0,0,1);
+    text-shadow: 0 0 15px rgba(0, 0, 0, 1);
 }
 
 .disabled:hover .text {
@@ -117,50 +124,47 @@
     transform: scale(80%);
 }
 
-.disabled:hover .text > h2{
+.disabled:hover .text > h2 {
     opacity: 0;
 }
 
 @media (max-width: 600px) and (pointer: coarse) and (hover: none) {
-    .ProjectsContainer {
+    .ProjectContainer {
         width: 300px;
         height: 100px;
         touch-action: none;
     }
-    
-    .ProjectsContainer:hover {
+
+    .ProjectContainer:hover {
         transform: none;
         -webkit-transform: none;
-        -ms-transform:none;
+        -ms-transform: none;
         box-shadow: inherit;
         touch-action: none;
     }
 
-    .ProjectsContainer:hover > img {
-        /* border-radius: 0; */
-    }
-
-    .ProjectsContainer > .text {
+    .ProjectContainer > .text {
         font-size: 150%;
         transform: none;
         -webkit-transform: none;
         -ms-transform: none;
     }
 
-    .disabled:hover .text > p, .disabled:hover .text > h2 {
+    .disabled:hover .text > p,
+    .disabled:hover .text > h2 {
         font-size: 100%;
         transform: none;
         -webkit-transform: none;
         -ms-transform: none;
     }
 
-    .disabled > img{
+    .disabled > img {
         transform: none;
         -webkit-transform: none;
         -ms-transform: none;
     }
-    
-    .disabled:hover img{
+
+    .disabled:hover img {
         width: 100%;
     }
 }

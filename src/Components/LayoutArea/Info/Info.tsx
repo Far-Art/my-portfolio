@@ -1,6 +1,6 @@
 import "./Info.css";
 
-function Info(): JSX.Element {
+export default function Info(): JSX.Element {
     return (
         <div className="Info">
 			<p>
@@ -12,5 +12,3 @@ function Info(): JSX.Element {
         </div>
     );
 }
-
-export default Info;

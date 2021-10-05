@@ -1,17 +1,10 @@
-.Main{
-	margin-top: 5vh;
-	user-select: none;
-}
-
-.Main, .Main > *{
-	justify-content: center;
-	justify-items: center;
-	align-items: center; 
-    align-content: center;
-}
-
 .Main > .ProjectsContainer {
-	margin: 2.5vh;
+	display: flex;
+	user-select: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
 }
 
 .Main > h2 {
