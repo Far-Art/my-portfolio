@@ -1,33 +1,39 @@
-import ProjectsContainer from "../ProjectsContainer/ProjectsContainer";
+import ProjectContainer from "../ProjectContainer/ProjectContainer";
 import "./Main.css";
-import projectImg from '../../../Assets/Images/art-burger-preview.jpg';
-import projectImg2 from '../../../Assets/Images/messi.jpg';
+import artBurgerImg from '../../../Assets/Images/art-burger-thumbnail.jpg';
+import couponAsArtImg from '../../../Assets/Images/coupon-as-art-thumbnail.jpg';
+import MyStory from "../MyStory/MyStory";
+import Skills from "../Skills/Skills";
+import Info from "../Info/Info";
 
-
-function Main(): JSX.Element {
+export default function Main(): JSX.Element {
     return (
         <div className="Main">
-			<h2>My Projects</h2>
-            <ProjectsContainer 
-                name="Art-Burger" 
-                image={projectImg} 
-                link="https://artburger.herokuapp.com/"
-                disabled={false} 
-            />
-            <ProjectsContainer 
-                name="The Best Player" 
-                image={projectImg2} 
-                link="https://best-player-itw.herokuapp.com/"
-                disabled={false} 
-            />
-            <ProjectsContainer 
-                name="Coupon System" 
-                image={""} 
-                link="https://artburger.herokuapp.com/"
-                disabled={true}
-            />
+            {/* <MyStory /> */}
+            <Info />
+
+            <h2>My Projects</h2>
+            <div className="ProjectsContainer">
+                <ProjectContainer
+                    name="Art-Burger"
+                    image={artBurgerImg}
+                    link="https://artburger.herokuapp.com/"
+                />
+                <ProjectContainer
+                    name="Coupons As Art"
+                    image={couponAsArtImg}
+                    link="https://artburger.herokuapp.com/"
+                />
+
+                <ProjectContainer
+                    name="More to come..."
+                    image={couponAsArtImg}
+                    link="https://artburger.herokuapp.com/"
+                    disabled={true}
+                />
+            </div>
+
+            <Skills />
         </div>
     );
 }
-
-export default Main;

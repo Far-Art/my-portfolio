@@ -1,23 +1,25 @@
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
-import Info from "../Info/Info";
-import Main from "../Main/Main";
-import Skills from "../Skills/Skills";
-import SocialMedia from "../SocialMedia/SocialMedia";
+import Routing from "../Routing/Routing";
+import SocialMedia from "../SocialMediaContainer/SocialMediaContainer";
 import "./Layout.css";
 
 
-function Layout(): JSX.Element {
+export default function Layout(): JSX.Element {
     return (
         <div className="Layout">
-			<Header />
-            <SocialMedia/>
-            <Info />
-            <Main />
-            <Skills />
-            <Footer/>
+            <header>
+                <Header />
+            </header>
+            <nav>
+                <SocialMedia />
+            </nav>
+            <main>
+                <Routing />
+            </main>
+            <footer>
+                <Footer />
+            </footer>
         </div>
     );
 }
-
-export default Layout;

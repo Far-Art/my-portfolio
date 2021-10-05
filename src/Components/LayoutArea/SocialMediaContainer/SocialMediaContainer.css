@@ -1,4 +1,11 @@
-.SocialMedia, .SocialMedia > div > a {
+.SocialMediaContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+/* .SocialMedia, .SocialMedia > div > a {
     transition: 0.3s;
 }
 
@@ -28,7 +35,7 @@
     transform: translateX(-25px);
     user-select: none;
     opacity: 0;
-    pointer-events: none; /* this also disables JS */
+    pointer-events: none;
     transition: 0.2s;
 }
 
@@ -60,4 +67,4 @@
         0 0 0 rgba(255,255,255,0.0),
         inset -4px -4px 8px 0 rgba(0, 0, 0, 0.05),
         inset 4px 4px 10px 0 rgba(255, 255, 255, 0.3);
-}
+} */
