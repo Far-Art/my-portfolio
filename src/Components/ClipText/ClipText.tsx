@@ -4,18 +4,23 @@ import "./ClipText.css";
 
 interface ClipTextProps {
     text: string;
-    split?: "whitespace";
+    textTransform?: "uppercase" | "lowercase" | "capitalize" | "unset" | "none";
+    split?: "whitespace" | "dot";
     fontSize?: string;
+    fontWeight?: number;
     image?: string;
     imageFloat?: "left" | "center" | "right" | "top" | "bottom";
     enableShadow?: boolean;
     textShadow?: string;
     filter?: string;
+    maxWidth?: string;
 }
 
 export default function ClipText(props: ClipTextProps): JSX.Element {
 
     const { windowWidth, } = useWindowDimensions();
+
+    const [mainContainer, setMainContainer] = useState<React.CSSProperties>({});
 
     const [text, setText] = useState<string[]>([]);
 
@@ -25,10 +30,21 @@ export default function ClipText(props: ClipTextProps): JSX.Element {
 
     const [shadowContainerStyle, setShadowContainerStyle] = useState<React.CSSProperties>({});
 
+    /*  Main Container  */
+    useEffect(() => {
+        const styleObj: React.CSSProperties = {};
+        if (props.maxWidth) {
+            styleObj.maxWidth = props.maxWidth;
+        }
+        setMainContainer(styleObj);
+    }, [props.maxWidth]);
+
     /*  Text Split  */
     useEffect(() => {
         if (props.split && props.split === "whitespace") {
             setText(props.text.split(" "));
+        } else if (props.split && props.split === "dot") {
+            setText(props.text.split("."));
         } else {
             setText([props.text]);
         }
@@ -41,14 +57,20 @@ export default function ClipText(props: ClipTextProps): JSX.Element {
             styleObj.color = "transparent";
         }
         if (props.fontSize) {
-            if(windowWidth < 600){
-                styleObj.fontSize = `calc(${props.fontSize} / 1.6)`;
+            if (windowWidth < 600) {
+                styleObj.fontSize = `calc(${props.fontSize} / 1.2)`;
             } else {
                 styleObj.fontSize = props.fontSize;
             }
         }
+        if (props.fontWeight) {
+            styleObj.fontWeight = props.fontWeight;
+        }
+        if (props.textTransform) {
+            styleObj.textTransform = props.textTransform;
+        }
         setTextStyle(styleObj);
-    }, [props.image, props.fontSize, windowWidth]);
+    }, [props.image, props.fontSize, windowWidth, props.fontWeight, props.textTransform]);
 
     /* Text Container Style  */
     useEffect(() => {
@@ -78,7 +100,7 @@ export default function ClipText(props: ClipTextProps): JSX.Element {
     }, [props.enableShadow, props.textShadow, props.filter]);
 
     return (
-        <div className="ClipText" >
+        <div className="ClipText" style={mainContainer} >
             <div className="ClipTextShadowContainer" style={shadowContainerStyle}>
                 {text.map((str, index) => <h1 key={index} style={textStyle}>{str}</h1>)}
             </div>

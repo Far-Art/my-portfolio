@@ -32,4 +32,5 @@
 .ClipTextContainer > *,
 .ClipTextShadowContainer > * {
     display: list-item;
+    list-style: none;
 }
