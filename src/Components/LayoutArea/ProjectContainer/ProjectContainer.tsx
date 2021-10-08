@@ -1,5 +1,5 @@
 import "./ProjectContainer.css";
-import constructImg from '../../../Assets/Images/under-construct.jpg';
+import constructImg from "../../../Assets/Images/under-construct.jpg";
 
 interface ProjectContainerProps {
     name: string;
@@ -12,7 +12,7 @@ interface ProjectContainerProps {
 export default function ProjectContainer(props: ProjectContainerProps): JSX.Element {
     const image = (props.disabled ? constructImg : props.image);
     const classes = "ProjectContainer" + (props.disabled ? " disabled" : "");
-    
+
     const element = (
         props.disabled ?
             <div className="text">
@@ -30,7 +30,7 @@ export default function ProjectContainer(props: ProjectContainerProps): JSX.Elem
         <div className={classes} >
             <a href={props.link} rel="noopener noreferrer" target="_blank"></a>
             {element}
-            <img src={image} />
+            <img src={image} alt={props.name} />
         </div>
     );
 }
