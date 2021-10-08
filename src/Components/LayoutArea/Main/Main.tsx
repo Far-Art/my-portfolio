@@ -6,7 +6,7 @@ import MyStory from "../MyStory/MyStory";
 import Skills from "../Skills/Skills";
 import Info from "../Info/Info";
 import ClipText from "../../ClipText/ClipText";
-import textBackgroundImg from "../../../Assets/Backgrounds/sunset-clouds.svg";
+import textBackgroundImg from "../../../Assets/Backgrounds/sunset-clouds.jpg";
 import MaskedCard from "../../MaskedCard/MaskedCard";
 
 export default function Main(): JSX.Element {
@@ -18,6 +18,7 @@ export default function Main(): JSX.Element {
                 text="artur farmanov portfolio"
                 split="whitespace"
                 image={textBackgroundImg}
+                // filter={"hue-rotate(90deg)"}
                 enableShadow={true}
                 textShadow={`0 1px 1px rgba(0,0,0,0.11), 
                 0 2px 2px rgba(0,0,0,0.11), 
