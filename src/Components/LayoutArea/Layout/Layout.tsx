@@ -8,15 +8,15 @@ import "./Layout.css";
 export default function Layout(): JSX.Element {
     return (
         <div className="Layout">
-            <header>
-                <Header />
-            </header>
-            <nav>
-                <SocialMedia />
-            </nav>
-            <main>
+
+            {/* <Header /> */}
+
+
+                {/* <SocialMedia /> */}
+
+
                 <Routing />
-            </main>
+
             <footer>
                 <Footer />
             </footer>
