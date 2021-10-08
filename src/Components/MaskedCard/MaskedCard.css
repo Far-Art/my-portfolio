@@ -1,0 +1,16 @@
+.MaskedCard {
+    position: relative;
+}
+
+.MaskedCard > .MaskedCard__Mask {
+    width: 200px;
+    height: 100px;
+    background-color: rosybrown;
+    /* mask: ; */
+}
+
+.MaskedCard > .MaskedCard__Image {
+    width: 130px;
+    height: 130px;
+    background-color: red;
+}
