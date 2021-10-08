@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,900&family=Rubik:ital,wght@0,900;1,900&display=swap");
+
+.ClipText {
+    position: relative;
+    padding: 0;
+    margin: 15px;
+}
+
+.ClipText > .ClipTextContainer > *,
+.ClipText > .ClipTextShadowContainer > * {
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 4rem;
+    color: black;
+}
+
+.ClipText > .ClipTextContainer {
+    position: relative;
+    background-clip: text;
+    background-size: cover;
+}
+
+.ClipText > .ClipTextShadowContainer {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%);
+}
+
+.ClipTextContainer > *, .ClipTextShadowContainer > *{
+    display: list-item;
+}
+
+@media only screen and (max-width: 600px) {
+    .ClipText > .ClipTextContainer > *,
+    .ClipText > .ClipTextShadowContainer > * {
+        font-size: 2.5rem;
+    }
+}
