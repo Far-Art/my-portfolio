@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import useWindowDimensions from "../../Hooks/useWindowDimension";
 import "./ClipText.css";
 
 interface ClipTextProps {
@@ -13,6 +14,8 @@ interface ClipTextProps {
 }
 
 export default function ClipText(props: ClipTextProps): JSX.Element {
+
+    const { windowWidth, } = useWindowDimensions();
 
     const [text, setText] = useState<string[]>([]);
 
@@ -38,10 +41,14 @@ export default function ClipText(props: ClipTextProps): JSX.Element {
             styleObj.color = "transparent";
         }
         if (props.fontSize) {
-            styleObj.fontSize = `calc(var(--font-size) + ${props.fontSize})`;
+            if(windowWidth < 600){
+                styleObj.fontSize = `calc(${props.fontSize} / 1.6)`;
+            } else {
+                styleObj.fontSize = props.fontSize;
+            }
         }
         setTextStyle(styleObj);
-    }, [props.image, props.fontSize]);
+    }, [props.image, props.fontSize, windowWidth]);
 
     /* Text Container Style  */
     useEffect(() => {
@@ -56,7 +63,7 @@ export default function ClipText(props: ClipTextProps): JSX.Element {
             styleObj.filter = props.filter;
         }
         setTextContainerStyle(styleObj);
-    }, [props.image, props.filter]);
+    }, [props.image, props.filter, props.imageFloat]);
 
     /*  Shadow Container Style  */
     useEffect(() => {

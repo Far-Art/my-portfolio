@@ -4,7 +4,6 @@
     position: relative;
     padding: 0;
     margin: 15px;
-    
 }
 
 .ClipText > .ClipTextContainer > *,
@@ -33,12 +32,4 @@
 .ClipTextContainer > *,
 .ClipTextShadowContainer > * {
     display: list-item;
-}
-
-@media only screen and (max-width: 600px) {
-    .ClipText > .ClipTextContainer > *,
-    .ClipText > .ClipTextShadowContainer > * {
-
-    }
-
 }
