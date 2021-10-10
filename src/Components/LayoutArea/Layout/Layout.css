@@ -12,8 +12,10 @@
 
 .Layout > .Background__main_image {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
     background-image: url("../../../Assets/Backgrounds/sunset-clouds.jpg");
     background-size: 100% 100%;
     filter: blur(15px) opacity(25%);
