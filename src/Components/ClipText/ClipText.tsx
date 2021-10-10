@@ -5,6 +5,7 @@ import "./ClipText.css";
 interface ClipTextProps {
     text: string;
     textTransform?: "uppercase" | "lowercase" | "capitalize" | "unset" | "none";
+    textAlign?: "start" | "end" | "left" | "right" | "center" | "justify" | "initial" | "inherit";
     split?: "whitespace" | "dot";
     fontSize?: string;
     minFontSize?: string;
@@ -82,8 +83,11 @@ export default function ClipText(props: ClipTextProps): JSX.Element {
         if (props.textTransform) {
             styleObj.textTransform = props.textTransform;
         }
+        if (props.textAlign) {
+            styleObj.textAlign = props.textAlign;
+        }
         setTextStyle(styleObj);
-    }, [props.image, windowWidth, props.fontWeight, props.textTransform]);
+    }, [props.image, windowWidth, props.fontWeight, props.textTransform, props.textAlign]);
 
     /* Text Container Style  */
     useEffect(() => {

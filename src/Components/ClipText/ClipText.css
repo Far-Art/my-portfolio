@@ -13,6 +13,7 @@
     font-weight: 900;
     display: list-item;
     color: black;
+    text-align: center;
 }
 
 .ClipText > .ClipTextContainer {
