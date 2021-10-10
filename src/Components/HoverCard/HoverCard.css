@@ -22,7 +22,8 @@
     transition: transform 200ms linear;
     overflow: hidden;
     border: 2px solid rgba(255, 255, 255, 0.6);
-    border-radius: 25px;
+    border-radius: 40px;
+    clip-path: content-box;
 }
 
 .HoverCard__container::after {
@@ -31,10 +32,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 95%;
-    width: 97.7%;
+    height: 97%;
+    width: 98.2%;
     border: 1px solid rgba(255, 255, 255, 0.7);
-    border-radius: 20px;
+    border-radius: 35px;
     background: rgba(0, 0, 0, 0.08);
 }
 
