@@ -28,10 +28,5 @@ img {
 }
 
 #root {
-    overflow-x: hidden;
-    height: 100vh;
-    width: 100vw;
-    height: 100%;
-    position: fixed;
-    text-align: center;
+    overflow: hidden;
 }
