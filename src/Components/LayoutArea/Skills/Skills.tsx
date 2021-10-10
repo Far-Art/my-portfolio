@@ -1,27 +1,24 @@
 import "./Skills.css";
 
-function Skills(): JSX.Element {
+export default function Skills(): JSX.Element {
     return (
         <div className="Skills">
-			<h2>My Skills</h2>
-            <p>I specialize in:</p>
             <div className="twoDimensional">
                 <ul>
                     <li>Java</li>
                     <li>Spring Boot</li>
-                    <li>MySQL</li>
+                    <li>Hibernate</li>
                     <li>JDBC</li>
+                    <li>MySQL</li>
                 </ul>
                 <ul>
-                    <li>React</li>
+                    <li>React.js</li>
+                    <li>Redux</li>
+                    <li>Axios</li>
                     <li>JavaScript</li>
                     <li>TypeScript</li>
-                    <li>CSS/HTML</li>
                 </ul>
             </div>
-            
         </div>
     );
 }
-
-export default Skills;

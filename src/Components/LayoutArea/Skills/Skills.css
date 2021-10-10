@@ -1,26 +1,24 @@
 .Skills {
-    width: 400px;
-    height: auto;
-    border-radius: 100px;
-    user-select: none;
-    margin: 20px auto;
+    display: flex;
+    align-self: center;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
-.Skills > p {
-    font-size: 115%;
+.Skills li {
+    font-size: clamp(1.1rem, 1.5vw, 1.5rem);
     color: rgb(78, 78, 78);
 }
 
 .Skills > .twoDimensional {
-	display: flex;
+    display: flex;
     flex-direction: row;
-    border-radius: 100px;
 }
 
 .Skills > .twoDimensional > ul {
     user-select: text;
-	margin: auto;
-    padding: 10px;
+    margin: auto;
+    padding: 15px;
     list-style: none;
     color: rgb(78, 78, 78);
 }
@@ -29,12 +27,6 @@
     content: "\2022";
     color: rgb(153, 18, 81);
     font-weight: bold;
-    display: inline-block; 
-    width: 1em;
-    padding: 0;
-    margin-left: auto;
-}
-
-.Skills > h2 {
-    color: rgb(60, 60, 60);
+    display: inline-block;
+    width: 1rem;
 }
