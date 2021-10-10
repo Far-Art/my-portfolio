@@ -6,7 +6,7 @@
     aspect-ratio: 2/1;
     perspective: 1000px;
     touch-action: pinch-zoom;
-    height: clamp(100px, 40vw, 350px);
+    height: clamp(100px, 40vw, 300px);
     margin: 15px;
 }
 
