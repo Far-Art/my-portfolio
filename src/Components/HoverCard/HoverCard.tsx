@@ -1,13 +1,17 @@
-import { CSSProperties, useState } from "react";
+import { CSSProperties, useEffect, useState } from "react";
 import "./HoverCard.css";
 
 interface HoverCardProps {
     image: string;
     title?: string;
     apiStack?: string[];
+    src?: string;
+    marginBottom?: string;
 }
 
 export default function HoverCard(props: HoverCardProps): JSX.Element {
+
+    const [fieldStyle, setFieldStyle] = useState<CSSProperties>({});
 
     const [containerStyle, setContainerStyle] = useState<CSSProperties>({});
 
@@ -25,9 +29,15 @@ export default function HoverCard(props: HoverCardProps): JSX.Element {
 
     const returnToOrigin: CSSProperties = { transform: `rotateX(${0}deg) rotateY(${0}deg)`, transition: transitionOnLeave };
 
-    const maxDeg = 18;
+    const maxDeg = 100;
 
     let returnToOriginTimeout: NodeJS.Timeout;
+
+    useEffect(() => {
+        if (props.marginBottom) {
+            setFieldStyle({ marginBottom: props.marginBottom });
+        }
+    }, [props.marginBottom]);
 
     function mouseMoveHandler(event: any) {
         // get target boundaries
@@ -41,13 +51,13 @@ export default function HoverCard(props: HoverCardProps): JSX.Element {
         let boundaryX = (rect.top + rect.height / 2) - clientY;
         let boundaryY = (rect.left + rect.width / 2) - clientX;
 
-        const degY = Math.min(boundaryY * -0.09, maxDeg);
-        const degX = Math.min(boundaryX * 0.09, maxDeg);
+        const degY = Math.min(boundaryY * -0.04, maxDeg);
+        const degX = Math.min(boundaryX * 0.04, maxDeg);
 
         // define styles
         const containerStyle: CSSProperties = { transform: `rotateX(${degX}deg) rotateY(${degY}deg)`, transition: transitionOnMouseMove }
         const titleStyle: CSSProperties = { transform: `rotateX(${degX}deg) rotateY(${degY}deg) translate3d(0, 0, 60px)`, transition: transitionOnMouseMove };
-        const imageStyle: CSSProperties = { transform: `rotateX(${degX * 0.6}deg) rotateY(${degY * 0.6}deg) translate3d(0, 0, -300px)`, transition: transitionOnMouseMove }
+        const imageStyle: CSSProperties = { transform: `rotateX(${degX}deg) rotateY(${degY}deg) translate3d(0, 0, -300px)`, transition: transitionOnMouseMove }
 
         //set styles
         setContainerStyle(containerStyle);
@@ -58,6 +68,7 @@ export default function HoverCard(props: HoverCardProps): JSX.Element {
     return (
         <div
             className="HoverCardField"
+            style={{ ...fieldStyle }}
             onMouseEnter={() => clearTimeout(returnToOriginTimeout)}
             onTouchMove={(event) => mouseMoveHandler(event)}
             onMouseMove={(event) => mouseMoveHandler(event)}
@@ -71,14 +82,17 @@ export default function HoverCard(props: HoverCardProps): JSX.Element {
                 setImageStyle({ transform: returnToOrigin.transform + ` ${imageTranslade3d}`, transition: transitionOnLeave });
                 setTitleStyle({ transform: returnToOrigin.transform + ` ${titleTranslade3d}`, transition: transitionOnLeave });
             }, 1700)}>
+
             <div
                 className="HoverCard__container"
+
                 style={containerStyle}>
                 <div
                     className="HoverCard__image"
                     style={{ ...imageStyle, background: `url(${props.image})`, backgroundSize: "90%", backgroundPosition: "center" }} />
-
+                {props.src && <a href={props.src} rel="noopener noreferrer" target="_blank" className="HoverCardLink" />}
             </div>
+
             <div
                 className="HoverCard__title"
                 style={titleStyle}>
