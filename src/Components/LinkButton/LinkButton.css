@@ -28,7 +28,7 @@
     background-color: var(--white-transparent);
     backdrop-filter: blur(var(--blur));
     font-weight: 500;
-    font-size: clamp(8px, 2vw, 12px);
+    font-size: clamp(8px, 3vw, 16px);
     color: rgb(60, 60, 60);
     padding: 3px 1.5vw;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.05);
