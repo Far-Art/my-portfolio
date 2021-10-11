@@ -8,17 +8,13 @@ export default function Layout(): JSX.Element {
     const colorPalette = "light";
     return (
         <div className="Layout" color-palette={colorPalette}>
-
-
-            {/* <SocialMedia /> */}
-
-
+            <SocialMedia />
             <Routing />
-
-            <footer>
-                <Footer />
-            </footer>
-            <section className="Background__main_image"/>
+            <Footer />
+            <section>
+                <div className="Background__secondary_solid" />
+                <div className="Background__main_image" />
+            </section>
         </div>
     );
 }
