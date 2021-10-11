@@ -16,6 +16,7 @@ interface ClipTextProps {
     textShadow?: string;
     filter?: string;
     maxWidth?: string;
+    margin?: string;
 }
 
 export default function ClipText(props: ClipTextProps): JSX.Element {
@@ -40,8 +41,11 @@ export default function ClipText(props: ClipTextProps): JSX.Element {
         if (props.maxWidth) {
             styleObj.maxWidth = props.maxWidth;
         }
+        if (props.margin) {
+            styleObj.margin = props.margin;
+        }
         setMainContainer(styleObj);
-    }, [props.maxWidth]);
+    }, [props.maxWidth, props.margin]);
 
     /* Font size */
     useEffect(() => {
