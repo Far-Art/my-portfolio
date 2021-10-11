@@ -19,13 +19,13 @@ export default function HoverCard(props: HoverCardProps): JSX.Element {
 
     const [titleStyle, setTitleStyle] = useState<CSSProperties>({});
 
-    const imageTranslade3d = "translate3d(0, 0, -300px)";
+    const imageTranslade3d = "translate3d(0, 0, -150px)";
 
-    const titleTranslade3d = "translate3d(0, 0, 60px)";
+    const titleTranslade3d = "translate3d(0, 0, 40px)";
 
-    const transitionOnMouseMove = "transform 200ms ease-out";
+    const transitionOnMouseMove = "transform 150ms linear";
 
-    const transitionOnLeave = "transform 1s ease-out";
+    const transitionOnLeave = "transform 1s cubic-bezier(.42,.01,.56,1.02)";
 
     const returnToOrigin: CSSProperties = { transform: `rotateX(${0}deg) rotateY(${0}deg)`, transition: transitionOnLeave };
 
@@ -56,8 +56,8 @@ export default function HoverCard(props: HoverCardProps): JSX.Element {
 
         // define styles
         const containerStyle: CSSProperties = { transform: `rotateX(${degX}deg) rotateY(${degY}deg)`, transition: transitionOnMouseMove }
-        const titleStyle: CSSProperties = { transform: `rotateX(${degX}deg) rotateY(${degY}deg) translate3d(0, 0, 60px)`, transition: transitionOnMouseMove };
-        const imageStyle: CSSProperties = { transform: `rotateX(${degX}deg) rotateY(${degY}deg) translate3d(0, 0, -300px)`, transition: transitionOnMouseMove }
+        const titleStyle: CSSProperties = { transform: `rotateX(${degX}deg) rotateY(${degY}deg) ${titleTranslade3d}`, transition: transitionOnMouseMove };
+        const imageStyle: CSSProperties = { transform: `rotateX(${degX}deg) rotateY(${degY}deg) ${imageTranslade3d}`, transition: transitionOnMouseMove }
 
         //set styles
         setContainerStyle(containerStyle);
