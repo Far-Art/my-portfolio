@@ -6,7 +6,7 @@
     aspect-ratio: 2/1;
     perspective: 1000px;
     touch-action: pinch-zoom;
-    height: clamp(100px, 40vw, 200px);
+    height: clamp(100px, 40vw, 270px);
     margin: 15px;
 }
 
@@ -60,7 +60,7 @@
     text-align: left;
     transform: translate3d(0, 0, 40px);
     width: 95%;
-    font-size: clamp(1.3rem, 7vw, 2.5rem);
+    font-size: clamp(1.3rem, 7vw, 2.7rem);
     max-width: 95%;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 2px 2px 10px rgba(0, 0, 0, 0.1),
         4px 4px 15px rgba(0, 0, 0, 0.15), 6px 6px 20px rgba(0, 0, 0, 0.15);
@@ -76,7 +76,7 @@
 
 .HoverCard__apistack > * {
     padding: 0.6px clamp(2px, 1.4vw, 10px);
-    font-size: clamp(0.5rem, 2.5vw, 0.75rem);
+    font-size: clamp(0.5rem, 2.5vw, 0.9rem);
     color: white;
     font-weight: 300;
     background: rgba(0, 0, 0, 0.8);
