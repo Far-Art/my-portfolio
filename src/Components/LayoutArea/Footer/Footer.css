@@ -1,4 +1,5 @@
 .Footer {
-    color: rgb(131, 131, 131);
-	padding-top: 30px;
+    font-size: clamp(5px, 3vw, 10px);
+    color: rgba(0, 0, 0, 0.5);
+    padding-top: 30px;
 }

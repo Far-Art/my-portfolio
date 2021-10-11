@@ -1,25 +1,20 @@
 import Footer from "../Footer/Footer";
-import Header from "../Header/Header";
 import Routing from "../Routing/Routing";
-import SocialMedia from "../SocialMediaContainer/SocialMediaContainer";
+import SocialMediaContainer from "../SocialMediaContainer/SocialMediaContainer";
 import "./Layout.css";
 
 
 export default function Layout(): JSX.Element {
+    const colorPalette = "light";
     return (
-        <div className="Layout">
-            <header>
-                <Header />
-            </header>
-            <nav>
-                <SocialMedia />
-            </nav>
-            <main>
-                <Routing />
-            </main>
-            <footer>
-                <Footer />
-            </footer>
+        <div className="Layout" color-palette={colorPalette}>
+            <SocialMediaContainer />
+            <Routing />
+            <Footer />
+            <section>
+                <div className="Background__secondary_solid" />
+                <div className="Background__main_image" />
+            </section>
         </div>
     );
 }

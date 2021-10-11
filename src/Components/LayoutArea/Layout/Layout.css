@@ -1,7 +1,40 @@
 .Layout {
-	display: flex;
+    display: flex;
+    position: relative;
+    width: 100vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
+.Layout > section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -9999;
+}
+
+.Background__main_image {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 120%;
+    background-image: url("../../../Assets/Backgrounds/sunset-clouds.jpg");
+    background-size: 110% 110%;
+    filter: blur(15px) opacity(25%);
+    transform: rotate(180deg);
+}
+
+.Background__secondary_solid {
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

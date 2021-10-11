@@ -1,12 +1,61 @@
-.Main > .ProjectsContainer {
-	display: flex;
-	user-select: none;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 30px;
+.Main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
 }
 
-.Main > h2 {
-	color: rgb(60, 60, 60);
+.Main,
+.Main > * {
+    max-width: 95vw;
+}
+
+.Fixed__container {
+    top: 0;
+    position: relative;
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.ProjectsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1400px;
+    user-select: none;
+    justify-content: center;
+    gap: 20px;
+}
+
+.ContentContainer > p {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: clamp(0.5rem, 3vw, 0.75rem);
+}
+
+.ArturPhoto {
+    width: clamp(250px, 40vw, 350px);
+    aspect-ratio: 1;
+    background-image: url("../../../Assets/Images/artur-photo.png");
+    background-size: cover;
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.11))
+        drop-shadow(0 2px 2px rgba(0, 0, 0, 0.11))
+        drop-shadow(0 4px 4px rgba(0, 0, 0, 0.11))
+        drop-shadow(0 6px 8px rgba(0, 0, 0, 0.11))
+        drop-shadow(0 8px 16px rgba(0, 0, 0, 0.11));
+}
+
+.NavLink__story {
+    font-size: clamp(1rem, 2vw, 1.6rem);
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 100vw;
+    padding: 5px 10px;
+    margin: 10px auto 25px;
+}
+
+.NavLink__story:hover {
+    background: rgba(82, 8, 8, 0.2);
 }

@@ -1,11 +1,11 @@
 import "./Footer.css";
+import packageJson from "../../../../package.json";
 
-function Footer(): JSX.Element {
+export default function Footer(): JSX.Element {
     return (
         <div className="Footer">
-			<p>All rights reserved to &copy; Artur Farmanov</p>
+            <p>{`All rights reserved to © Artur Farmanov`}</p>
+            <p>app version {packageJson.version}</p>
         </div>
     );
 }
-
-export default Footer;
