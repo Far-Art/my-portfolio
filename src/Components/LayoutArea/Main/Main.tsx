@@ -23,7 +23,7 @@ export default function Main(): JSX.Element {
                     image={textBackgroundImg}
                     fontSize="4vw"
                     minFontSize="2rem"
-                    maxFontSize="3rem"
+                    maxFontSize="4rem"
                     textShadow={shadowStyle}
                 />
 
