@@ -52,7 +52,7 @@ export default function HoverCard(props: HoverCardProps): JSX.Element {
         let boundaryY = (rect.left + rect.width / 2) - clientX;
 
         const degY = Math.min(boundaryY * -0.04, maxDeg);
-        const degX = Math.min(boundaryX * 0.04, maxDeg);
+        const degX = Math.min(boundaryX * 0.1, maxDeg);
 
         // define styles
         const containerStyle: CSSProperties = { transform: `rotateX(${degX}deg) rotateY(${degY}deg)`, transition: transitionOnMouseMove }
@@ -85,13 +85,13 @@ export default function HoverCard(props: HoverCardProps): JSX.Element {
 
             <div
                 className="HoverCard__container"
-
                 style={containerStyle}>
                 <div
                     className="HoverCard__image"
-                    style={{ ...imageStyle, background: `url(${props.image})`, backgroundSize: "90%", backgroundPosition: "center" }} />
+                    style={{ ...imageStyle, background: `url(${props.image})`, backgroundSize: "90%", backgroundPosition: "center", backgroundRepeat: "repeat" }} />
                 {props.src && <a href={props.src} rel="noopener noreferrer" target="_blank" className="HoverCardLink" />}
             </div>
+
 
             <div
                 className="HoverCard__title"
