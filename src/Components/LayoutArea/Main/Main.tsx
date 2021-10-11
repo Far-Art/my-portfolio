@@ -34,10 +34,10 @@ export default function Main(): JSX.Element {
                     textAlign="justify"
                     fontWeight={600}
                     fontSize="2vw"
-                    minFontSize="0.7rem"
+                    minFontSize="0.8rem"
                     maxFontSize="1rem"
                     maxWidth="800px"
-                    filter="contrast(120%) brightness(70%)"
+                    filter="contrast(90%) brightness(60%)"
                     textTransform="unset"
                     image={textBackgroundImg}
                     textShadow={shadowStyle}
