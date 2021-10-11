@@ -1,4 +1,4 @@
-import LinkButton from "../LinkButton/LinkButton";
+import LinkButton from "../../LinkButton/LinkButton";
 import "./SocialMediaContainer.css";
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -20,6 +20,7 @@ export default function SocialMediaContainer(): JSX.Element {
             <LinkButton
                 placeholder={"Facebook"}
                 link={"https://www.facebook.com/artur.farmanov"}
+                // link="fb://profile/artur.farmanov"
                 icon={FacebookRoundedIcon} />
         </div>
     );
