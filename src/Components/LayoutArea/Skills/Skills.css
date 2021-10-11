@@ -1,19 +1,13 @@
 .Skills {
     display: flex;
-    align-self: center;
     justify-content: space-evenly;
     width: 100%;
 }
 
-.Skills li {
-    font-size: clamp(1.1rem, 1.5vw, 1.5rem);
-    color: rgb(49, 49, 49);
-    font-weight: 500;
-}
-
 .Skills > .twoDimensional {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .Skills > .twoDimensional > ul {
@@ -22,6 +16,12 @@
     padding: 15px;
     list-style: none;
     color: rgb(78, 78, 78);
+}
+
+.Skills li {
+    font-size: clamp(0.5rem, 3.9vw, 0.9rem);
+    color: rgb(49, 49, 49);
+    font-weight: 500;
 }
 
 .Skills > .twoDimensional > ul > li::before {
