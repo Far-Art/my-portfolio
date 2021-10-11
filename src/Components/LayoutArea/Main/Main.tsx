@@ -75,7 +75,6 @@ export default function Main(): JSX.Element {
                         marginBottom="5vh"
                         image={underConstructBackgroundImg}
                         title="More underway..."
-                        src="https://couponasart.herokuapp.com"
                         apiStack={["microservices", "spring cloud"]}
                     />
                 </div>
