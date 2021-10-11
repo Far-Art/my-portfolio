@@ -37,7 +37,7 @@
 }
 
 .ArturPhoto {
-    width: clamp(250px, 40vw, 350px);
+    width: clamp(250px, 40vw, 400px);
     aspect-ratio: 1;
     background-image: url("../../../Assets/Images/artur-photo.png");
     background-size: cover;
