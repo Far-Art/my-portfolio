@@ -4,8 +4,8 @@ import couponAsArtImg from '../../../Assets/Images/coupon-as-art-thumbnail.jpg';
 import Skills from "../Skills/Skills";
 import ClipText from "../../ClipText/ClipText";
 import textBackgroundImg from "../../../Assets/Backgrounds/sunset-clouds.jpg";
+import underConstructBackgroundImg from "../../../Assets/Images/under-construct.jpg";
 import HoverCard from "../../HoverCard/HoverCard";
-import { NavLink } from "react-router-dom";
 
 export default function Main(): JSX.Element {
     const shadowStyle = `0 1px 1px rgba(0,0,0,0.11), 
@@ -69,6 +69,14 @@ export default function Main(): JSX.Element {
                         title="Coupon As Art"
                         src="https://couponasart.herokuapp.com"
                         apiStack={["React", "TypeScript", "Redux", "Axios", "Java", "Spring boot", "Hibernate", "MySQL"]}
+                    />
+
+                    <HoverCard
+                        marginBottom="5vh"
+                        image={underConstructBackgroundImg}
+                        title="More underway..."
+                        src="https://couponasart.herokuapp.com"
+                        apiStack={["microservices", "spring cloud"]}
                     />
                 </div>
 
