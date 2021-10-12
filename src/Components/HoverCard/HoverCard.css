@@ -2,11 +2,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 300px;
     aspect-ratio: 2/1;
     perspective: 1000px;
     touch-action: pinch-zoom;
     height: clamp(100px, 40vw, 270px);
+    width: clamp(200px, 80vw, 540px);
     margin: 15px;
 }
 
