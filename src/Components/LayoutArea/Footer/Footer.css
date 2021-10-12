@@ -3,3 +3,17 @@
     color: rgba(0, 0, 0, 0.5);
     padding-top: 30px;
 }
+
+.Footer button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 50px;
+    margin: 5px 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.Footer button:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
