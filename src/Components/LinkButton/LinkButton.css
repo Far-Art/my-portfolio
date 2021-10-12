@@ -9,7 +9,7 @@
     position: relative;
     display: inline-block;
     width: clamp(30px, 9vw, 60px);
-    aspect-ratio: 1;
+    height: clamp(30px, 9vw, 60px);
     margin: 5px auto;
     border-radius: var(--border-radius);
 }

@@ -23,7 +23,7 @@ export default function HoverCard(props: HoverCardProps): JSX.Element {
 
     const titleTranslade3d = "translate3d(0, 0, 40px)";
 
-    const transitionOnMouseMove = "transform 150ms linear";
+    const transitionOnMouseMove = "transform 70ms linear";
 
     const transitionOnLeave = "transform 1s cubic-bezier(.42,.01,.56,1.02)";
 
@@ -76,12 +76,12 @@ export default function HoverCard(props: HoverCardProps): JSX.Element {
                 setContainerStyle(returnToOrigin);
                 setImageStyle({ transform: returnToOrigin.transform + ` ${imageTranslade3d}`, transition: transitionOnLeave });
                 setTitleStyle({ transform: returnToOrigin.transform + ` ${titleTranslade3d}`, transition: transitionOnLeave });
-            }, 1700)}
+            }, 1300)}
             onMouseOut={() => returnToOriginTimeout = setTimeout(() => {
                 setContainerStyle(returnToOrigin);
                 setImageStyle({ transform: returnToOrigin.transform + ` ${imageTranslade3d}`, transition: transitionOnLeave });
                 setTitleStyle({ transform: returnToOrigin.transform + ` ${titleTranslade3d}`, transition: transitionOnLeave });
-            }, 1700)}>
+            }, 1300)}>
 
             <div
                 className="HoverCard__container"
@@ -89,9 +89,8 @@ export default function HoverCard(props: HoverCardProps): JSX.Element {
                 <div
                     className="HoverCard__image"
                     style={{ ...imageStyle, background: `url(${props.image})`, backgroundSize: "90%", backgroundPosition: "center", backgroundRepeat: "repeat" }} />
-                {props.src && <a href={props.src} rel="noopener noreferrer" target="_blank" className="HoverCardLink" />}
+                {props.src && <a href={props.src} rel="noopener noreferrer" target="_blank" className="HoverCardLink"></a>}
             </div>
-
 
             <div
                 className="HoverCard__title"

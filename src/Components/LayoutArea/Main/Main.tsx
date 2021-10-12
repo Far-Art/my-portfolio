@@ -8,6 +8,7 @@ import underConstructBackgroundImg from "../../../Assets/Images/under-construct.
 import HoverCard from "../../HoverCard/HoverCard";
 
 export default function Main(): JSX.Element {
+
     const shadowStyle = `0 1px 1px rgba(0,0,0,0.11), 
                         0 2px 2px rgba(0,0,0,0.11), 
                         0 4px 4px rgba(0,0,0,0.11), 
@@ -15,7 +16,6 @@ export default function Main(): JSX.Element {
                         0 8px 16px rgba(0,0,0,0.11)`;
     return (
         <div className="Main">
-
             <div className="Fixed__container">
                 <ClipText
                     text="artur farmanov portfolio"
