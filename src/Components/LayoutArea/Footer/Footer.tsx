@@ -10,6 +10,8 @@ export default function Footer(): JSX.Element {
         <div className="Footer">
             <p>{`All rights reserved to © Artur Farmanov`}</p>
             <button onClick={() => {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
                 history.push("/credits");
             }}>Credits</button>
             <p>app version {packageJson.version}</p>
