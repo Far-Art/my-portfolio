@@ -25,7 +25,7 @@ export default function MyStory(): JSX.Element {
                 My story starts at military service, where I got an avionics tech position.
                 I was responsible for servicing F-16 fighter jets.
             </p>
-            <img className="Story_image" height="432px" width="322px" src={inJetImg} />
+            <img className="Story_image" height="432px" width="322px" src={inJetImg} alt="me in the jet" />
         </div>
     );
 }
