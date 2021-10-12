@@ -89,9 +89,8 @@ export default function HoverCard(props: HoverCardProps): JSX.Element {
                 <div
                     className="HoverCard__image"
                     style={{ ...imageStyle, background: `url(${props.image})`, backgroundSize: "90%", backgroundPosition: "center", backgroundRepeat: "repeat" }} />
-                {props.src && <a href={props.src} rel="noopener noreferrer" target="_blank" className="HoverCardLink" />}
+                {props.src && <a href={props.src} rel="noopener noreferrer" target="_blank" className="HoverCardLink"></a>}
             </div>
-
 
             <div
                 className="HoverCard__title"
