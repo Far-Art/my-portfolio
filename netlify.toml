@@ -1,4 +1,0 @@
-[[redirects]]
-  from = "/*"
-  to = "/"
-  force = true # COMMENT: ensure that we always redirect
