@@ -9,11 +9,11 @@ import HoverCard from "../../HoverCard/HoverCard";
 
 export default function Main(): JSX.Element {
 
-    const shadowStyle = `0 1px 1px rgba(0,0,0,0.11), 
-                        0 2px 2px rgba(0,0,0,0.11), 
-                        0 4px 4px rgba(0,0,0,0.11), 
-                        0 6px 8px rgba(0,0,0,0.11),
-                        0 8px 16px rgba(0,0,0,0.11)`;
+    const shadowStyle = `0 2px 1px rgba(0,0,0,0.12), 
+    0 4px 2px rgba(0,0,0,0.12), 
+    0 8px 4px rgba(0,0,0,0.12), 
+    0 16px 8px rgba(0,0,0,0.12),
+    0 32px 16px rgba(0,0,0,0.12)`;
     return (
         <div className="Main">
             <div className="Fixed__container">
@@ -30,7 +30,7 @@ export default function Main(): JSX.Element {
                 <div className="ArturPhoto" />
 
                 <ClipText
-                    text="Hi there, My name is Artur, I welcome you in my portfolio website. I'm a junior full stack developer, I encourage you to browse my portfolio and be impressed by my projects ;)"
+                    text="Hi there, My name is Artur, I welcome you in my portfolio website. I'm a junior full stack developer, I encourage you to browse my portfolio and be impressed by my pet projects ;)"
                     textAlign="justify"
                     fontWeight={600}
                     fontSize="2vw"
@@ -49,7 +49,7 @@ export default function Main(): JSX.Element {
 
             <div className="ContentContainer">
                 <ClipText
-                    text="projects"
+                    text="Pet projects"
                     image={textBackgroundImg}
                     textShadow={shadowStyle}
                 />

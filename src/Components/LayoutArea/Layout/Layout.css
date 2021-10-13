@@ -25,8 +25,9 @@
     width: 110%;
     height: 120%;
     background-image: url("../../../Assets/Backgrounds/sunset-clouds.jpg");
-    background-size: 110% 110%;
-    filter: blur(15px) opacity(25%);
+    background-size: 100% 100%;
+    background-position: center;
+    filter: blur(20px) opacity(22%);
     transform: rotate(180deg);
 }
 
