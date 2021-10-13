@@ -8,14 +8,19 @@
 
     position: relative;
     display: inline-block;
-    width: clamp(30px, 9vw, 60px);
-    height: clamp(30px, 9vw, 60px);
-    margin: 5px auto;
+    width: clamp(35px, 5vw, 55px);
+    height: clamp(35px, 5vw, 55px);
+    margin: 15px auto;
+    padding: clamp(0.5px, 2vw, 4px);
     border-radius: var(--border-radius);
+    box-shadow: 0 2px 1px rgba(0,0,0,0.12), 
+    0 4px 2px rgba(0,0,0,0.12), 
+    0 8px 4px rgba(0,0,0,0.12), 
+    0 16px 8px rgba(0,0,0,0.12),
+    0 32px 16px rgba(0,0,0,0.12);
 }
 
 .LinkButton:hover .LinkButton__link_background {
-    opacity: 1;
     filter: blur(4px);
 }
 
@@ -46,14 +51,11 @@
     width: 100%;
     height: 100%;
     text-decoration: none;
-    border-radius: var(--border-radius);
-    overflow: hidden;
 }
 
 .LinkButton > a > * {
-    padding: clamp(0.5px, 2vw, 4px);
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     border-radius: var(--border-radius);
 }
 
@@ -71,7 +73,6 @@
     background-image: url("../../Assets/Backgrounds/sunset-clouds.jpg");
     background-size: 100% 100%;
     z-index: -1;
-    opacity: 0.8;
     filter: blur(0);
     transition: all 200ms ease-in-out;
 }
