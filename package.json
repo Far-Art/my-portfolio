@@ -6,6 +6,7 @@
     "node": "14.x",
     "npm": "7.19.1"
   },
+  "homepage": "/*",
   "dependencies": {
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
