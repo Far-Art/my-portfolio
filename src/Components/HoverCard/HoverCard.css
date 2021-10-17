@@ -16,6 +16,8 @@
 
 .HoverCardField * {
     pointer-events: none;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
 }
 
 .HoverCard__container {
