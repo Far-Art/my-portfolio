@@ -59,8 +59,8 @@ export default function Main(): JSX.Element {
                         marginBottom="2vh"
                         image={artBurgerImg}
                         title="Art Burger"
-                        src="https://artburger.herokuapp.com/"
-                        apiStack={["React", "TypeScript", "Redux"]}
+                        src="https://art-burger.netlify.app/"
+                        apiStack={["React", "TypeScript", "Redux", "Responsive"]}
                     />
 
                     <HoverCard
