@@ -60,7 +60,7 @@ export default function Main(): JSX.Element {
                         image={artBurgerImg}
                         title="Art Burger"
                         src="https://artburger.herokuapp.com/"
-                        apiStack={["React", "TypeScript", "Redux"]}
+                        apiStack={["React", "TypeScript", "Redux", "Responsive"]}
                     />
 
                     <HoverCard
