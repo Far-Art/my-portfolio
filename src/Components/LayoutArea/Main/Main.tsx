@@ -54,6 +54,7 @@ export default function Main(): JSX.Element {
                     textShadow={shadowStyle}
                 />
                 <p>Projects may take up to 5 minutes to load, please be patient</p>
+
                 <div className="ProjectsContainer">
                     <HoverCard
                         marginBottom="2vh"
@@ -68,7 +69,7 @@ export default function Main(): JSX.Element {
                         image={couponAsArtImg}
                         title="Coupon As Art"
                         src="https://couponasart.herokuapp.com"
-                        apiStack={["React", "TypeScript", "Redux", "Axios", "Java", "Spring boot", "Hibernate", "MySQL"]}
+                        apiStack={["React", "TypeScript", "Redux", "Axios", "REST", "Java", "Spring boot", "Hibernate", "MySQL", "SPA"]}
                     />
 
                     <HoverCard
@@ -78,7 +79,7 @@ export default function Main(): JSX.Element {
                         apiStack={["microservices", "spring cloud"]}
                     />
                 </div>
-
+                <p>Cards hover effect can be interacted with swipe</p>
                 <ClipText
                     text="I have skills in..."
                     image={textBackgroundImg}
