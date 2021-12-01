@@ -35,6 +35,8 @@ export default function ClipText(props: ClipTextProps): JSX.Element {
 
     const [fontSize, setFontSize] = useState<string>();
 
+    const [classes, setClasses] = useState<string>();
+
     /*  Main Container  */
     useEffect(() => {
         const styleObj: React.CSSProperties = {};
@@ -122,11 +124,11 @@ export default function ClipText(props: ClipTextProps): JSX.Element {
 
     return (
         <div className="ClipText" style={mainContainer} >
-            <div className="ClipTextShadowContainer" style={shadowContainerStyle}>
-                {text.map((str, index) => <h1 key={index} style={{ ...textStyle, fontSize: fontSize }}>{str}</h1>)}
+            <div aria-hidden={true} className="ClipTextShadowContainer" style={shadowContainerStyle}>
+                {text.map((str, index) => <p key={index} style={{ ...textStyle, fontSize: fontSize }}>{str}</p>)}
             </div>
             <div style={textContainerStyle} className="ClipTextContainer">
-                {text.map((str, index) => <h1 key={index} style={{ ...textStyle, fontSize: fontSize }}>{str}</h1>)}
+                {text.map((str, index) => <p key={index} style={{ ...textStyle, fontSize: fontSize }}>{str}</p>)}
             </div>
         </div>
     );
