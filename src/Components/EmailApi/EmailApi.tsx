@@ -15,7 +15,10 @@ function EmailApi(): JSX.Element {
     const onSubmit = async (data: any) => { handleOnClick(data) }
 
     const handleOnClick = (e: any) => {
+        // remove console log
         console.log("sending");
+        console.log(userId);
+        console.log(templateId);
         e.preventDefault();
         if (templateId !== undefined && userId !== undefined) {
             sendForm("gmail", templateId, e.target, userId)
