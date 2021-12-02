@@ -1,11 +1,14 @@
 import "./EmailApi.css";
-import { init, sendForm } from 'emailjs-com';
+import { sendForm } from 'emailjs-com';
 import "./emailKey.js";
-import emailKey from "./emailKey.js";
 import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
 
 function EmailApi(): JSX.Element {
+
+    const userId = process.env.USER_ID;
+
+    const templateId = process.env.TEMPLATE_ID;
 
     const { register, handleSubmit } = useForm({});
 
@@ -14,15 +17,18 @@ function EmailApi(): JSX.Element {
     const handleOnClick = (e: any) => {
         console.log("sending");
         e.preventDefault();
-        sendForm("gmail", emailKey.TEMPLATE_ID, e.target, emailKey.USER_ID)
-            .then((response) => toast.success("Good"))
-            .catch((error) => toast.error("error"));
+        if (templateId !== undefined && userId !== undefined) {
+            sendForm("gmail", templateId, e.target, userId)
+                .then((response) => toast.success("Good"))
+                .catch((error) => toast.error("error"));
+        }
+
     }
     return (
         <div className="EmailApi">
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input 
-                    {...register("name", {required: "Name is required"})}
+                <input
+                    {...register("name", { required: "Name is required" })}
                 />
             </form>
             <button type="submit">send</button>
