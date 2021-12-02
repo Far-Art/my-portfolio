@@ -1,4 +1,3 @@
-import { ToastContainer } from "react-toastify";
 import Logo from "../../Logo/Logo";
 import Footer from "../Footer/Footer";
 import Routing from "../Routing/Routing";
@@ -28,7 +27,6 @@ export default function Layout(): JSX.Element {
                     <Footer />
                 </footer>
             </div>
-            <ToastContainer position="bottom-right" hideProgressBar={true} />
         </>
     );
 }
