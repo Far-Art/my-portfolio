@@ -13,18 +13,18 @@ export default function Skills(): JSX.Element {
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>Redux</li>
-                    <li>Aspect Oriented Programming</li>
+                    <li>AOP</li>
                 </ul>
                 <ul>
-                    <li>React.js</li>
+                    <li>React</li>
                     <li>Single Page Applications</li>
                     <li>Axios</li>
                     <li>JavaScript</li>
                     <li>TypeScript</li>
                     <li>REST APIs</li>
-                    <li>Responsive web design</li>
+                    <li>Responsive Layout</li>
                     <li>Functional Programming</li>
-                    <li>Object Oriented Programming</li>
+                    <li>OOP</li>
                 </ul>
             </div>
         </div>

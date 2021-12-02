@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+src/Components/EmailApi/emailKey.txt
+src/Components/EmailApi/emailKey.env
+src/Components/EmailApi/emailKey.js

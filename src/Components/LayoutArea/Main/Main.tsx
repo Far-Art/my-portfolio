@@ -1,5 +1,6 @@
 import "./Main.css";
 import artBurgerImg from '../../../Assets/Images/art-burger-thumbnail.jpg';
+import neonClockImg from '../../../Assets/Images/neon-clock-thumbnail.jpg';
 import couponAsArtImg from '../../../Assets/Images/coupon-as-art-thumbnail.jpg';
 import Skills from "../Skills/Skills";
 import ClipText from "../../ClipText/ClipText";
@@ -9,61 +10,38 @@ import HoverCard from "../../HoverCard/HoverCard";
 
 export default function Main(): JSX.Element {
 
-    const shadowStyle = `0 2px 1px rgba(0,0,0,0.12), 
-    0 4px 2px rgba(0,0,0,0.12), 
-    0 8px 4px rgba(0,0,0,0.12), 
-    0 16px 8px rgba(0,0,0,0.12),
-    0 32px 16px rgba(0,0,0,0.12)`;
+    const shadowStyle = `0 2px 1px rgba(0,0,0,0.07), 
+    0 4px 2px rgba(0,0,0,0.07), 
+    0 8px 4px rgba(0,0,0,0.07), 
+    0 16px 8px rgba(0,0,0,0.07),
+    0 32px 16px rgba(0,0,0,0.07)`;
     return (
         <div className="Main">
             <div className="Fixed__container">
-                <ClipText
-                    text="artur farmanov portfolio"
-                    split="whitespace"
-                    image={textBackgroundImg}
-                    fontSize="4vw"
-                    minFontSize="2rem"
-                    maxFontSize="4rem"
-                    textShadow={shadowStyle}
-                />
-
                 <div className="ArturPhoto" />
-
                 <ClipText
-                    text="Hi there, My name is Artur, I welcome you in my portfolio website. I'm a junior full stack developer, I encourage you to browse my portfolio and be impressed by my pet projects ;)"
+                    text="Hello random visitor, I'm Artur Farmanov, a junior Full-Stack Developer, I welcome you in my portfolio website. I encourage you to browse my projects and leave a comment ;)"
                     textAlign="justify"
                     fontWeight={600}
                     fontSize="2vw"
                     minFontSize="0.8rem"
                     maxFontSize="1rem"
                     maxWidth="800px"
-                    filter="contrast(90%) brightness(60%)"
                     textTransform="unset"
-                    image={textBackgroundImg}
+                    image="var(--linear-gradient-middle)"
                     textShadow={shadowStyle}
                 />
-
-                {/* <NavLink className="NavLink__story" to="/story">Get to know more</NavLink> */}
-
             </div>
 
             <div className="ContentContainer">
                 <ClipText
                     text="Pet projects"
-                    image={textBackgroundImg}
+                    image="var(--linear-gradient)"
                     textShadow={shadowStyle}
                 />
                 <p>Projects may take up to 5 minutes to load, please be patient</p>
 
                 <div className="ProjectsContainer">
-                    <HoverCard
-                        marginBottom="2vh"
-                        image={artBurgerImg}
-                        title="Art Burger"
-                        src="https://art-burger.netlify.app/"
-                        apiStack={["React", "TypeScript", "Redux", "Responsive"]}
-                    />
-
                     <HoverCard
                         marginBottom="5vh"
                         image={couponAsArtImg}
@@ -73,23 +51,40 @@ export default function Main(): JSX.Element {
                     />
 
                     <HoverCard
+                        marginBottom="2vh"
+                        image={artBurgerImg}
+                        title="Art Burger"
+                        src="https://art-burger.netlify.app/"
+                        apiStack={["React", "TypeScript", "Redux", "Responsive"]}
+                    />
+
+                    <HoverCard
+                        marginBottom="2vh"
+                        image={neonClockImg}
+                        title="Art Neon Clock"
+                        src="https://neon-analog-clock.netlify.app/"
+                        apiStack={["Vanilla HTML", "Vanilla JavaScript", "Responsive"]}
+                    />
+
+                    <HoverCard
                         marginBottom="5vh"
                         image={underConstructBackgroundImg}
                         title="More underway..."
                         apiStack={["microservices", "spring cloud"]}
                     />
+                    <p>Cards hover effect can be interacted with swipe</p>
                 </div>
-                <p>Cards hover effect can be interacted with swipe</p>
+
                 <ClipText
                     text="I have skills in..."
-                    image={textBackgroundImg}
-                    imageFloat="top"
+                    image="var(--linear-gradient)"
                     fontSize="5vw"
                     minFontSize="0.9rem"
                     maxFontSize="1.6rem"
                     margin="20px auto 0"
                     textShadow={shadowStyle}
                 />
+                
                 <Skills />
             </div>
         </div>

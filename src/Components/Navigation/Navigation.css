@@ -1,0 +1,31 @@
+.Navigation {
+    display: grid;
+    position: fixed;
+    right: 0;
+    gap: 15px;
+    z-index: 9999;
+}
+
+.Navigation > * {
+    background: var(--linear-gradient);
+    font-family: "Cinzel", serif;
+    font-weight: 700;
+    color: transparent;
+    padding: 8px 20px;
+    transform: rotate(-35deg);
+    cursor: pointer;
+    background-clip: text;
+}
+
+.Navigation > *:hover {
+    background: black;
+}
+
+.Navigation > *:active {
+    color: white;
+    background-clip: border-box;
+}
+
+[is-active="active"]{
+    /* background-clip: border-box; */
+}
