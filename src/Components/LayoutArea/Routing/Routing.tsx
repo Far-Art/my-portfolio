@@ -8,6 +8,7 @@ export default function Routing(): JSX.Element {
         <div className="Routing">
             <Routes>
                 <Route path="/" element={<Main />} />
+                <Route path="/home" element={<Main />} />
                 <Route path="/story" element={<MyStory />} />
                 <Route path="/credits" element={<CreditsPage />} />
             </Routes>
