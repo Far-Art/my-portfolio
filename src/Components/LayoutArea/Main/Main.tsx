@@ -18,18 +18,7 @@ export default function Main(): JSX.Element {
     return (
         <div className="Main">
             <div className="Fixed__container">
-                {/* <ClipText
-                    text="artur farmanov portfolio"
-                    split="whitespace"
-                    image={textBackgroundImg}
-                    fontSize="4vw"
-                    minFontSize="2rem"
-                    maxFontSize="4rem"
-                    textShadow={shadowStyle}
-                /> */}
-
                 <div className="ArturPhoto" />
-
                 <ClipText
                     text="Hello random visitor, I'm Artur Farmanov, a junior Full-Stack Developer, I welcome you in my portfolio website. I encourage you to browse my projects and leave a comment ;)"
                     textAlign="justify"
@@ -42,21 +31,17 @@ export default function Main(): JSX.Element {
                     image="var(--linear-gradient-middle)"
                     textShadow={shadowStyle}
                 />
-
-                {/* <NavLink className="NavLink__story" to="/story">Get to know more</NavLink> */}
-
             </div>
 
             <div className="ContentContainer">
                 <ClipText
                     text="Pet projects"
-                    image={textBackgroundImg}
+                    image="var(--linear-gradient)"
                     textShadow={shadowStyle}
                 />
                 <p>Projects may take up to 5 minutes to load, please be patient</p>
 
                 <div className="ProjectsContainer">
-
                     <HoverCard
                         marginBottom="5vh"
                         image={couponAsArtImg}
@@ -87,18 +72,19 @@ export default function Main(): JSX.Element {
                         title="More underway..."
                         apiStack={["microservices", "spring cloud"]}
                     />
+                    <p>Cards hover effect can be interacted with swipe</p>
                 </div>
-                <p>Cards hover effect can be interacted with swipe</p>
+
                 <ClipText
                     text="I have skills in..."
-                    image={textBackgroundImg}
-                    imageFloat="top"
+                    image="var(--linear-gradient)"
                     fontSize="5vw"
                     minFontSize="0.9rem"
                     maxFontSize="1.6rem"
                     margin="20px auto 0"
                     textShadow={shadowStyle}
                 />
+                
                 <Skills />
             </div>
         </div>
