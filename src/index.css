@@ -6,6 +6,11 @@
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
@@ -17,7 +22,7 @@ body {
         "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: antialiased;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6); /* this background seen when making overscroll on mobile devices */
 }
 
 a {
@@ -29,5 +34,5 @@ img {
 }
 
 #root {
-    overflow: hidden;
+
 }
