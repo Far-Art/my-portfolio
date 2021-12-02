@@ -1,10 +1,10 @@
 import "./Footer.css";
 import packageJson from "../../../../package.json";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Footer(): JSX.Element {
 
-    const history = useHistory();
+    const navigate = useNavigate();
 
     return (
         <div className="Footer">
@@ -12,7 +12,7 @@ export default function Footer(): JSX.Element {
             <button onClick={() => {
                 document.body.scrollTop = 0;
                 document.documentElement.scrollTop = 0;
-                history.push("/credits");
+                navigate("/credits");
             }}>Credits</button>
             <p>app version {packageJson.version}</p>
         </div>
