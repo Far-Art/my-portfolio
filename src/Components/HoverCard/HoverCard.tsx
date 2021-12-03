@@ -32,8 +32,6 @@ export default function HoverCard(props: HoverCardProps): JSX.Element {
     const rotationSensivity = 0.05; // determines how fast rotation vill occurr
     const toOriginTimeoutMillis = 1300; // milliseconds before card return to original position
 
-    // let returnToOriginTimeout: NodeJS.Timeout;
-
     useEffect(() => {
         if (props.marginBottom) {
             setFieldStyle({ marginBottom: props.marginBottom });
