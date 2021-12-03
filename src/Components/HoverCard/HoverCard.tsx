@@ -29,7 +29,9 @@ export default function HoverCard(props: HoverCardProps): JSX.Element {
 
     const returnToOrigin: CSSProperties = { transform: `rotateX(${0}deg) rotateY(${0}deg)`, transition: transitionOnLeave };
 
-    const maxDeg = 100;
+    const maxYDeg = 8; // determines maximum rotation degree for Y
+    const maxXDeg = 8; // determines maximum rotation degree for X
+    const rotationSensivity = 0.02; // determines how fast rotation vill occurr
 
     let returnToOriginTimeout: NodeJS.Timeout;
 
@@ -40,24 +42,26 @@ export default function HoverCard(props: HoverCardProps): JSX.Element {
     }, [props.marginBottom]);
 
     function mouseMoveHandler(event: any) {
-        // get target boundaries
+        // get target coordinates
         const rect = event.target.getBoundingClientRect();
 
         // try to get touch coordinates, else get mouse coordinates
         const clientX = event.touches ? event.touches[0].clientX : event.clientX;
         const clientY = event.touches ? event.touches[0].clientY : event.clientY;
 
-        // calc boundaries      
-        let boundaryX = (rect.top + rect.height / 2) - clientY;
-        let boundaryY = (rect.left + rect.width / 2) - clientX;
+        // calc offsets      
+        const offsetX = (rect.top + rect.height / 2) - clientY;
+        const offsetY = -((rect.left + rect.width / 2) - clientX);
 
-        const degY = Math.min(boundaryY * -0.04, maxDeg);
-        const degX = Math.min(boundaryX * 0.1, maxDeg);
+        // set rotation degree
+        let rotationDegY = offsetY > 0 ? Math.min(offsetY * rotationSensivity, maxYDeg) : Math.max(offsetY * rotationSensivity, maxYDeg * -1);
+        let rotationDegX = offsetX > 0 ? Math.min(offsetX * rotationSensivity, maxXDeg) : Math.max(offsetX * rotationSensivity, maxXDeg * -1);
+
 
         // define styles
-        const containerStyle: CSSProperties = { transform: `rotateX(${degX}deg) rotateY(${degY}deg)`, transition: transitionOnMouseMove }
-        const titleStyle: CSSProperties = { transform: `rotateX(${degX}deg) rotateY(${degY}deg) ${titleTranslade3d}`, transition: transitionOnMouseMove };
-        const imageStyle: CSSProperties = { transform: `rotateX(${degX}deg) rotateY(${degY}deg) ${imageTranslade3d}`, transition: transitionOnMouseMove }
+        const containerStyle: CSSProperties = { transform: `rotateX(${rotationDegX}deg) rotateY(${rotationDegY}deg)`, transition: transitionOnMouseMove }
+        const titleStyle: CSSProperties = { transform: `rotateX(${rotationDegX}deg) rotateY(${rotationDegY}deg) ${titleTranslade3d}`, transition: transitionOnMouseMove };
+        const imageStyle: CSSProperties = { transform: `rotateX(${rotationDegX}deg) rotateY(${rotationDegY}deg) ${imageTranslade3d}`, transition: transitionOnMouseMove }
 
         //set styles
         setContainerStyle(containerStyle);
