@@ -1,4 +1,4 @@
-import { CSSProperties, useEffect, useState } from "react";
+import { CSSProperties, MouseEvent, TouchEvent, useEffect, useState } from "react";
 import "./HoverCard.css";
 
 interface HoverCardProps {
@@ -49,8 +49,8 @@ export default function HoverCard(props: HoverCardProps): JSX.Element {
         const clientY = event.touches ? event.touches[0].clientY : event.clientY;
 
         // calc offsets      
-        const offsetX = (rect.top + rect.height / 2) - clientY;
-        const offsetY = -((rect.left + rect.width / 2) - clientX);
+        const offsetX = Math.round((rect.top + rect.height / 2) - clientY);
+        const offsetY = Math.round(-((rect.left + rect.width / 2) - clientX));
 
         // set rotation degree
         let rotationDegY = offsetY > 0 ? Math.min(offsetY * rotationSensivity, maxYDeg) : Math.max(offsetY * rotationSensivity, maxYDeg * -1);
