@@ -1,4 +1,4 @@
-import { CSSProperties, MouseEvent, TouchEvent, useEffect, useState } from "react";
+import { CSSProperties, useEffect, useState } from "react";
 import "./HoverCard.css";
 
 interface HoverCardProps {
@@ -23,7 +23,7 @@ export default function HoverCard(props: HoverCardProps): JSX.Element {
 
     const titleTranslade3d = "translate3d(0, 0, 60px)";
 
-    const transitionOnLeave = "transform 1s cubic-bezier(.42,.01,.56,1.02)";
+    const transitionOnLeave = "all 1s cubic-bezier(.42,.01,.56,1.02)";
 
     const returnToOrigin: CSSProperties = { transform: `rotateX(${0}deg) rotateY(${0}deg)`, transition: transitionOnLeave };
 
@@ -62,8 +62,8 @@ export default function HoverCard(props: HoverCardProps): JSX.Element {
 
     let returnToOriginTimeout = () => setTimeout(() => {
         setContainerStyle(returnToOrigin);
-        setImageStyle({ transform: returnToOrigin.transform + ` ${imageTranslade3d}`, transition: transitionOnLeave });
-        setTitleStyle({ transform: returnToOrigin.transform + ` ${titleTranslade3d}`, transition: transitionOnLeave });
+        setImageStyle({ transform: returnToOrigin.transform + ` ${imageTranslade3d}`, WebkitTransform: returnToOrigin.transform + ` ${imageTranslade3d}`, transition: transitionOnLeave, WebkitTransition: transitionOnLeave });
+        setTitleStyle({ transform: returnToOrigin.transform + ` ${titleTranslade3d}`, WebkitTransform: returnToOrigin.transform + ` ${titleTranslade3d}`, transition: transitionOnLeave, WebkitTransition: transitionOnLeave });
     }, toOriginTimeoutMillis);
 
     return (
