@@ -101,7 +101,7 @@
 
 .HoverCard__apistack > * {
     padding: 0.6px clamp(2px, 1.4vw, 10px);
-    font-size: clamp(0.65rem, 1vw, 1rem);
+    font-size: clamp(0.63rem, 1.11vw, 1rem);
     color: white;
     font-weight: 300;
     background: rgba(0, 0, 0, 0.8);
