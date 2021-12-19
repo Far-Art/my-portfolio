@@ -47,7 +47,7 @@ export default function Main(): JSX.Element {
                         image={couponAsArtImg}
                         title="Coupon As Art"
                         src="https://couponasart.herokuapp.com"
-                        apiStack={["React", "TypeScript", "Redux", "Axios", "REST", "Java", "Spring boot", "Hibernate", "MySQL", "SPA"]}
+                        apiStack={["React", "TypeScript", "Redux", "Axios", "REST", "Java", "Spring Boot", "Hibernate", "MySQL", "SPA"]}
                     />
 
                     <HoverCard
@@ -69,8 +69,10 @@ export default function Main(): JSX.Element {
                     <HoverCard
                         marginBottom="5vh"
                         image={underConstructBackgroundImg}
-                        title="More underway..."
-                        apiStack={["microservices", "spring cloud"]}
+                        title="Snippy app"
+                        description="Snippy app is in development status. you can follow updates in github page by clicking on this link"
+                        src="https://github.com/Far-Art/snippy"
+                        apiStack={["React", "JavaScript", "Redux", "Axios", "Spring Boot", "Java", "MySQL", "REST", "SPA"]}
                     />
                     <p>Cards hover effect can be interacted with swipe</p>
                 </div>
@@ -84,7 +86,7 @@ export default function Main(): JSX.Element {
                     margin="20px auto 0"
                     textShadow={shadowStyle}
                 />
-                
+
                 <Skills />
             </div>
         </div>
