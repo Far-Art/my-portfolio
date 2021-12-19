@@ -7,6 +7,7 @@ interface HoverCardProps {
     apiStack?: string[];
     src?: string;
     marginBottom?: string;
+    description?: string;
 }
 
 export default function HoverCard(props: HoverCardProps): JSX.Element {
@@ -82,7 +83,10 @@ export default function HoverCard(props: HoverCardProps): JSX.Element {
                 <div
                     className="HoverCard__image"
                     style={{ ...imageStyle, backgroundImage: `url(${props.image})` }} />
-                {props.src && <a href={props.src} rel="noopener noreferrer" target="_blank" className="HoverCardLink"></a>}
+                {
+                    props.src && <a href={props.src} rel="noopener noreferrer" target="_blank" className="HoverCardLink"></a>}
+                    {props.description && <p className="HoverCard__description">{props.description}</p>
+                }
             </div>
 
             <div

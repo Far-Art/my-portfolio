@@ -34,6 +34,9 @@
     height: 100%;
     width: 100%;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 2px solid rgba(255, 255, 255, 0.6);
     border-radius: var(--border-radius);
     clip-path: view-box;
@@ -89,6 +92,14 @@
         6px 8px 20px rgba(0, 0, 0, 0.3);
     transition: var(--OnMouseMove);
     -webkit-transition: var(--OnMouseMove);
+}
+
+.HoverCard__description {
+    padding: 2px 15px;
+    color: white;
+    font-size: clamp(0.8rem, 1.5vw, 1.4rem);
+    text-shadow: 0 2px 7px rgba(0, 0, 0, 0.55), 2px 2px 10px rgba(0, 0, 0, 0.55),
+        4px 4px 15px rgba(0, 0, 0, 0.75), 4px 4px 10px rgba(0, 0, 0, 0.75);
 }
 
 .HoverCard__apistack {
