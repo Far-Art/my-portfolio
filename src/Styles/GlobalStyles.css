@@ -3,7 +3,8 @@
     --white: white;
     --white-transparent: rgba(255, 255, 255, 0.5);
 
-    --main-background: rgb(248, 243, 255);
+    --background-main: #e3dbeb;
+    --background-secondary: url("../Assets/Backgrounds/portfolio-background-io-pattern.png");
 
     --button-background: rgba(179, 19, 75, 0.5);
     --button-background-hover: rgb(187, 22, 55);
