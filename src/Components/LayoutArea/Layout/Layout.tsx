@@ -10,9 +10,9 @@ export default function Layout(): JSX.Element {
     return (
         <>
             <div className="Layout" color-palette={colorPalette}>
-                <div>
-                    <div className="Background__secondary_solid" />
-                </div>
+                <div className="Background__secondary" />
+                <div className="Background__main" />
+                
                 <header>
                     <Logo />
                 </header>
