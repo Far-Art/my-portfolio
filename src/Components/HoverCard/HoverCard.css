@@ -2,8 +2,8 @@
     --card-width: 20.5vw;
     --card-min-width: 150px;
     --card-max-width: 300px;
-    --OnMouseMove: all 70ms linear;
-    --border-radius: clamp(30px, 4vw, 70px);
+    --OnMouseMove: transform 70ms linear;
+    --border-radius: clamp(36px, 4.5vw, 70px);
 
     perspective: 800px;
     touch-action: pinch-zoom;
