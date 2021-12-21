@@ -1,5 +1,4 @@
 import "./MyStory.css";
-import textBackgroundImg from "../../../Assets/Backgrounds/sunset-clouds.jpg";
 import ClipText from "../../ClipText/ClipText";
 import inJetImg from "../../../Assets/Gallery/InJet.jpg";
 
@@ -18,7 +17,6 @@ export default function MyStory(): JSX.Element {
                 maxFontSize="2.5rem"
                 maxWidth="800px"
                 filter="contrast(120%) brightness(90%)"
-                image={textBackgroundImg}
                 textShadow={shadowStyle}
             />
             <p>
