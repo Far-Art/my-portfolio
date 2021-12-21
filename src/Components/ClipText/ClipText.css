@@ -2,7 +2,6 @@
 
 .ClipText {
     position: relative;
-    padding: 0;
     margin: 15px auto;
 }
 
@@ -10,17 +9,15 @@
 .ClipText > .ClipTextShadowContainer > * {
     font-family: "Montserrat";
     text-transform: uppercase;
-    font-weight: 900;
-    display: list-item;
+    font-weight: 500;
     color: black;
     text-align: center;
 }
 
 .ClipText > .ClipTextContainer {
+    display: inline-block;
     position: relative;
     background-clip: text;
-    background-size: cover;
-    background-position: center;
 }
 
 .ClipText > .ClipTextShadowContainer {
