@@ -1,11 +1,10 @@
 import "./Main.css";
-import artBurgerImg from '../../../Assets/Images/art-burger-thumbnail.jpg';
-import neonClockImg from '../../../Assets/Images/neon-clock-thumbnail.jpg';
-import couponAsArtImg from '../../../Assets/Images/coupon-as-art-thumbnail.jpg';
+import artBurgerImg from '../../../Assets/Thumbnails/art-burger-thumbnail.jpg';
+import neonClockImg from '../../../Assets/Thumbnails/neon-clock-thumbnail.jpg';
+import couponAsArtImg from '../../../Assets/Thumbnails/coupon-as-art-thumbnail.jpg';
 import Skills from "../Skills/Skills";
 import ClipText from "../../ClipText/ClipText";
-import textBackgroundImg from "../../../Assets/Backgrounds/sunset-clouds.jpg";
-import underConstructBackgroundImg from "../../../Assets/Images/under-construct.jpg";
+import underConstructBackgroundImg from "../../../Assets/Thumbnails/under-construct.jpg";
 import HoverCard from "../../HoverCard/HoverCard";
 
 export default function Main(): JSX.Element {
@@ -21,15 +20,14 @@ export default function Main(): JSX.Element {
                 <div className="ArturPhoto" />
                 <ClipText
                     text="Hello random visitor, I'm Artur Farmanov, a junior Full-Stack Developer, I welcome you in my portfolio website. I encourage you to browse my projects and leave a comment ;)"
-                    textAlign="justify"
-                    fontWeight={600}
-                    fontSize="2vw"
+                    fontSize="2.2vw"
                     minFontSize="0.8rem"
-                    maxFontSize="1rem"
+                    maxFontSize="1.05rem"
                     maxWidth="800px"
                     textTransform="unset"
                     image="var(--linear-gradient-middle)"
                     textShadow={shadowStyle}
+                    margin="20px 0 clamp(10px, 5vw, 70px) 0"
                 />
             </div>
 
@@ -39,8 +37,8 @@ export default function Main(): JSX.Element {
                     image="var(--linear-gradient)"
                     textShadow={shadowStyle}
                 />
-                <p>Projects may take up to 5 minutes to load, please be patient</p>
 
+                <p>{"*Projects may take up to 5 minutes to load, please be patient"}</p>
                 <div className="ProjectsContainer">
                     <HoverCard
                         marginBottom="5vh"
@@ -74,8 +72,9 @@ export default function Main(): JSX.Element {
                         src="https://github.com/Far-Art/snippy"
                         apiStack={["React", "JavaScript", "Redux", "Axios", "Spring Boot", "Java", "MySQL", "REST", "SPA"]}
                     />
-                    <p>Cards hover effect can be interacted with swipe</p>
                 </div>
+
+                <p>{"*Cards hover effect can be interacted with swipe"}</p>
 
                 <ClipText
                     text="I have skills in..."
