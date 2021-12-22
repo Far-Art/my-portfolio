@@ -61,6 +61,13 @@
     opacity: 0.2;
 }
 
+.HoverCard__container a {
+    color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
 .HoverCard__image {
     top: -25%;
     left: -25%;

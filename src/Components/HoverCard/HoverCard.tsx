@@ -84,18 +84,18 @@ export default function HoverCard(props: HoverCardProps): JSX.Element {
                     className="HoverCard__image"
                     style={{ ...imageStyle, backgroundImage: `url(${props.image})` }} />
                 {
-                    props.src && <a href={props.src} rel="noopener noreferrer" target="_blank" className="HoverCardLink"></a>}
-                    {props.description && <p className="HoverCard__description">{props.description}</p>
+                    props.src && <a href={props.src} rel="noopener noreferrer" target="_blank" className="HoverCardLink">{props.title}</a>}
+                {props.description && <p className="HoverCard__description">{props.description}</p>
                 }
             </div>
 
             <div
                 className="HoverCard__title"
                 style={titleStyle}>
-                {props.title}
+                <span aria-hidden="true">{props.title}</span>
                 <div
                     className="HoverCard__apistack"
-                >{props.apiStack && props.apiStack.map((stack, index) => <p key={index}>{stack}</p>)}</div>
+                >{props.apiStack && props.apiStack.map((stack, index) => <p aria-hidden="true" key={index}>{stack}</p>)}</div>
             </div>
         </div>
     );
