@@ -7,13 +7,21 @@
     --border-radius: 100vw;
 
     position: relative;
-    display: inline-block;
+    display: flex;
     width: clamp(35px, 5vw, 55px);
     height: clamp(35px, 5vw, 55px);
     margin: 15px auto;
     padding: clamp(0.5px, 2vw, 4px);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
+    align-items: center;
+    justify-content: center;
+}
+
+.LinkButton * {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
 }
 
 .LinkButton > span {
@@ -29,10 +37,8 @@
     color: rgb(60, 60, 60);
     padding: 3px 1.5vw;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.05);
-    user-select: none;
     opacity: 0;
     pointer-events: none;
-    z-index: 9999;
     transition: 0.2s;
 }
 
@@ -43,16 +49,21 @@
     width: 100%;
     height: 100%;
     text-decoration: none;
+    color: transparent;
 }
 
-.LinkButton > a > * {
+.LinkButton > a,
+.LinkButton > div {
     width: 100%;
     height: 100%;
     border-radius: var(--border-radius);
     transform: scale(90%);
 }
 
-.MuiSvgIcon-root {
+.LinkButton > svg {
+    position: absolute;
+    width: 80%;
+    height: 100%;
     color: rgba(255, 255, 255, 0.85);
 }
 
@@ -64,8 +75,4 @@
 .LinkButton__link_background {
     position: absolute;
     background: var(--linear-gradient);
-    background-size: 100% 100%;
-    z-index: -1;
-    filter: blur(0);
-    transition: all 200ms ease-in-out;
 }

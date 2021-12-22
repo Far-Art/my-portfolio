@@ -11,14 +11,15 @@ interface LinkButtonProps {
 export default function LinkButton(props: LinkButtonProps): JSX.Element {
     return (
         <div className="LinkButton">
+            <div className="LinkButton__link_background" />
+            <SvgIcon component={props.icon} />
             <a
                 rel="noopener noreferrer"
                 href={props.link}
                 target="_blank" >
-                <div className="LinkButton__link_background" />
-                <SvgIcon component={props.icon} />
+                {props.placeholder}
             </a>
-            <span>{props.placeholder}</span>
+            <span aria-hidden="true">{props.placeholder}</span>
         </div>
     );
 }
