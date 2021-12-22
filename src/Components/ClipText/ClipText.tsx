@@ -25,17 +25,15 @@ export default function ClipText(props: ClipTextProps): JSX.Element {
 
     const [mainContainer, setMainContainer] = useState<React.CSSProperties>({});
 
-    const [text, setText] = useState<string[]>([]);
+    const [textArray, setTextArray] = useState<string[]>([]);
 
     const [textStyle, setTextStyle] = useState<React.CSSProperties>({});
 
-    const [textContainerStyle, setTextContainerStyle] = useState<React.CSSProperties>({});
+    const [gradientTextStyle, setGradientTextStyle] = useState<React.CSSProperties>({});
 
     const [shadowContainerStyle, setShadowContainerStyle] = useState<React.CSSProperties>({});
 
     const [fontSize, setFontSize] = useState<string>();
-
-    const [textContainerClasses, setTextContainerClasses] = useState<string>("ClipTextContainer");
 
     /*  Main Container  */
     useEffect(() => {
@@ -69,11 +67,11 @@ export default function ClipText(props: ClipTextProps): JSX.Element {
     /*  Text Split  */
     useEffect(() => {
         if (props.split && props.split === "whitespace") {
-            setText(props.text.split(" "));
+            setTextArray(props.text.split(" "));
         } else if (props.split && props.split === "dot") {
-            setText(props.text.split("."));
+            setTextArray(props.text.split("."));
         } else {
-            setText([props.text]);
+            setTextArray([props.text]);
         }
     }, [props.text, props.split]);
 
@@ -95,7 +93,7 @@ export default function ClipText(props: ClipTextProps): JSX.Element {
         setTextStyle(styleObj);
     }, [props.image, windowWidth, props.fontWeight, props.textTransform, props.textAlign]);
 
-    /* Text Container Style  */
+    /* GradientText Style  */
     useEffect(() => {
         const styleObj: React.CSSProperties = {};
         if (props.image) {
@@ -111,7 +109,7 @@ export default function ClipText(props: ClipTextProps): JSX.Element {
         if (props.filter) {
             styleObj.filter = props.filter;
         }
-        setTextContainerStyle(styleObj);
+        setGradientTextStyle(styleObj);
     }, [props.image, props.filter, props.imageFloat]);
 
     /*  Shadow Container Style  */
@@ -129,10 +127,10 @@ export default function ClipText(props: ClipTextProps): JSX.Element {
     return (
         <div className="ClipText" style={mainContainer} >
             <div aria-hidden={true} className="ClipTextShadowContainer" style={shadowContainerStyle}>
-                {text.map((str, index) => <p key={index} style={{ ...textStyle, fontSize: fontSize }}>{str}</p>)}
+                {textArray.map((str, index) => <p key={index} style={{ ...textStyle, fontSize: fontSize }}>{<span aria-hidden={true}>{str}</span>}</p>)}
             </div>
-            <div style={textContainerStyle} className={textContainerClasses}>
-                {text.map((str, index) => <p key={index} style={{ ...textStyle, fontSize: fontSize }}>{str}</p>)}
+            <div className="ClipTextContainer">
+                {textArray.map((str, index) => <p key={index} style={{ ...textStyle, fontSize: fontSize }}>{<span className="GradientText" style={gradientTextStyle}>{str}</span>}</p>)}
             </div>
         </div>
     );
