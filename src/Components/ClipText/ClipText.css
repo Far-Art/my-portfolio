@@ -17,10 +17,18 @@
 .ClipText > .ClipTextContainer {
     display: inline-block;
     position: relative;
-    background-clip: text;
 }
 
 .ClipText > .ClipTextShadowContainer {
     position: absolute;
     width: 100%;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.ClipText .GradientText {
+    display: inline-block;
+    background-clip: text;
+    -webkit-background-clip: text;
 }
