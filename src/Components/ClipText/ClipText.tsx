@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import useWindowDimensions from "../../Hooks/useWindowDimension";
 import "./ClipText.css";
 
 interface ClipTextProps {
@@ -20,8 +19,6 @@ interface ClipTextProps {
 }
 
 export default function ClipText(props: ClipTextProps): JSX.Element {
-
-    const { windowWidth, } = useWindowDimensions();
 
     const [mainContainer, setMainContainer] = useState<React.CSSProperties>({});
 
@@ -91,7 +88,7 @@ export default function ClipText(props: ClipTextProps): JSX.Element {
             styleObj.textAlign = props.textAlign;
         }
         setTextStyle(styleObj);
-    }, [props.image, windowWidth, props.fontWeight, props.textTransform, props.textAlign]);
+    }, [props.image, props.fontWeight, props.textTransform, props.textAlign]);
 
     /* GradientText Style  */
     useEffect(() => {
