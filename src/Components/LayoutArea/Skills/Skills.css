@@ -1,33 +1,32 @@
 .Skills {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .Skills > .twoDimensional {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
 }
 
 .Skills > .twoDimensional > ul {
-    user-select: text;
-    margin: auto;
-    padding: 15px;
-    list-style: none;
-    color: rgb(78, 78, 78);
+  text-align: start;
+  user-select: text;
+  margin: auto;
+  padding: 15px;
+  list-style: none;
+  color: rgb(78, 78, 78);
 }
 
 .Skills li {
-    font-size: clamp(0.5rem, 3.9vw, 0.9rem);
-    color: rgb(49, 49, 49);
-    font-weight: 500;
+  font-size: clamp(0.5rem, 3.9vw, 0.9rem);
+  color: rgb(49, 49, 49);
+  font-weight: 500;
 }
 
 .Skills > .twoDimensional > ul > li::before {
-    content: "\2022";
-    color: rgb(153, 18, 81);
-    font-weight: bold;
-    display: inline-block;
-    width: 1rem;
+  content: "\2022";
+  color: rgb(153, 18, 81);
+  font-weight: bold;
+  display: inline-block;
+  width: 1rem;
 }

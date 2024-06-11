@@ -1,6 +1,7 @@
 import "./MaskedCard.css";
+import {ReactElement} from 'react';
 
-export default function MaskedCard(): JSX.Element {
+export default function MaskedCard(): ReactElement {
     return (
         <div className="MaskedCard">
             <div className="MaskedCard__Mask">

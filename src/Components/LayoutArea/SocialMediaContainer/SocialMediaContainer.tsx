@@ -2,8 +2,9 @@ import LinkButton from "../../LinkButton/LinkButton";
 import "./SocialMediaContainer.css";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import {ReactElement} from 'react';
 
-export default function SocialMediaContainer(): JSX.Element {
+export default function SocialMediaContainer(): ReactElement {
     return (
         <div className="SocialMediaContainer">
             <LinkButton

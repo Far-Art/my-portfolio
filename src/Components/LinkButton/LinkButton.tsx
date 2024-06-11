@@ -1,6 +1,7 @@
 import "./LinkButton.css";
 import { SvgIconComponent } from "@mui/icons-material";
 import { SvgIcon } from "@mui/material";
+import {ReactElement} from 'react';
 
 interface LinkButtonProps {
     placeholder: string;
@@ -8,7 +9,7 @@ interface LinkButtonProps {
     icon: SvgIconComponent
 }
 
-export default function LinkButton(props: LinkButtonProps): JSX.Element {
+export default function LinkButton(props: LinkButtonProps): ReactElement {
     return (
         <div className="LinkButton">
             <div className="LinkButton__link_background" />

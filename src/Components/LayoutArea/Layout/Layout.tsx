@@ -3,8 +3,9 @@ import Footer from "../Footer/Footer";
 import Routing from "../Routing/Routing";
 import SocialMediaContainer from "../SocialMediaContainer/SocialMediaContainer";
 import "./Layout.css";
+import {ReactElement} from 'react';
 
-export default function Layout(): JSX.Element {
+export default function Layout(): ReactElement {
     const colorPalette = "light";
 
     return (

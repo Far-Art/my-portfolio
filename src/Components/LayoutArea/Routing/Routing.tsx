@@ -2,8 +2,9 @@ import { Route, Routes } from "react-router-dom";
 import CreditsPage from "../../CreditsPage/CreditsPage";
 import Main from "../Main/Main";
 import MyStory from "../MyStory/MyStory";
+import {ReactElement} from 'react';
 
-export default function Routing(): JSX.Element {
+export default function Routing(): ReactElement {
     return (
         <div className="Routing">
             <Routes>

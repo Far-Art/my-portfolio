@@ -3,8 +3,9 @@ import { sendForm } from 'emailjs-com';
 import "./emailKey.js";
 import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
+import {ReactElement} from 'react';
 
-function EmailApi(): JSX.Element {
+function EmailApi(): ReactElement {
 
     const userId = process.env.USER_ID;
 

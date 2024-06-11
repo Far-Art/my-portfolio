@@ -1,8 +1,9 @@
 import "./Footer.css";
 import packageJson from "../../../../package.json";
 import { useNavigate } from "react-router-dom";
+import {ReactElement} from 'react';
 
-export default function Footer(): JSX.Element {
+export default function Footer(): ReactElement {
 
     const navigate = useNavigate();
 

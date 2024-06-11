@@ -1,63 +1,63 @@
 .Main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.Main p {
+  user-select: none;
 }
 
 .Main,
 .Main > * {
-    max-width: 95vw;
+  max-width: 95vw;
 }
 
 .Fixed__container {
-    top: 0;
-    position: relative;
-    display: flex;
-    width: 100vw;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  top: 0;
+  position: relative;
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .ProjectsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 1400px;
-    user-select: none;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1400px;
+  user-select: none;
+  justify-content: center;
+  gap: 20px;
 }
 
 .ContentContainer > p {
-    color: rgba(0, 0, 0, 0.55);
-    font-weight: 500;
-    font-size: clamp(0.4rem, 2.2vw, 1rem);
+  color: rgba(0, 0, 0, 0.55);
+  font-weight: 500;
+  font-size: clamp(0.4rem, 2.2vw, 1rem);
 }
 
 .ArturPhoto {
-    width: clamp(250px, 40vw, 400px);
-    height: clamp(250px, 40vw, 400px);
-    aspect-ratio: 1;
-    background-image: url("../../../Assets/Images/artur-photo.png");
-    background-size: cover;
-    filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.12))
-        drop-shadow(0 4px 2px rgba(0, 0, 0, 0.12))
-        drop-shadow(0 8px 4px rgba(0, 0, 0, 0.12))
-        drop-shadow(0 16px 8px rgba(0, 0, 0, 0.12))
-        drop-shadow(0 32px 16px rgba(0, 0, 0, 0.12));
+  width: clamp(250px, 40vw, 400px);
+  height: clamp(250px, 40vw, 400px);
+  aspect-ratio: 1;
+  background-image: url("../../../Assets/Images/artur-photo.png");
+  background-size: cover;
+  filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.12)) drop-shadow(0 4px 2px rgba(0, 0, 0, 0.12)) drop-shadow(0 8px 4px rgba(0, 0, 0, 0.12)) drop-shadow(0 16px 8px rgba(0, 0, 0, 0.12)) drop-shadow(0 32px 16px rgba(0, 0, 0, 0.12));
 }
 
 .NavLink__story {
-    font-size: clamp(1rem, 2vw, 1.6rem);
-    background: rgba(0, 0, 0, 0.08);
-    border-radius: 100vw;
-    padding: 5px 10px;
-    margin: 10px auto 25px;
+  font-size: clamp(1rem, 2vw, 1.6rem);
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 100vw;
+  padding: 5px 10px;
+  margin: 10px auto 25px;
 }
 
 .NavLink__story:hover {
-    background: rgba(82, 8, 8, 0.2);
+  background: rgba(82, 8, 8, 0.2);
 }

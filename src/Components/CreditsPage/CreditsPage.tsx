@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router";
 import "./CreditsPage.css";
+import {ReactElement} from 'react';
 
-export default function CreditsPage(): JSX.Element {
+export default function CreditsPage(): ReactElement {
     const navigate = useNavigate();
     return (
         <div className="CreditsPage">

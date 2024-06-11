@@ -1,8 +1,9 @@
 import "./MyStory.css";
 import ClipText from "../../ClipText/ClipText";
 import inJetImg from "../../../Assets/Gallery/InJet.jpg";
+import {ReactElement} from 'react';
 
-export default function MyStory(): JSX.Element {
+export default function MyStory(): ReactElement {
     const shadowStyle = `0 1px 1px rgba(0,0,0,0.11), 
                         0 2px 2px rgba(0,0,0,0.11), 
                         0 4px 4px rgba(0,0,0,0.11), 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {ReactElement, useEffect, useState} from 'react';
 import "./ClipText.css";
 
 interface ClipTextProps {
@@ -18,7 +18,7 @@ interface ClipTextProps {
     margin?: string;
 }
 
-export default function ClipText(props: ClipTextProps): JSX.Element {
+export default function ClipText(props: ClipTextProps): ReactElement {
 
     const [mainContainer, setMainContainer] = useState<React.CSSProperties>({});
 

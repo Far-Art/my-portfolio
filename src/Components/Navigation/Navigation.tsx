@@ -1,10 +1,10 @@
-import React, { useRef } from "react";
+import React, {ReactElement} from 'react';
 import "./Navigation.css";
 
 interface NavigationProps {
     ref?: React.RefObject<HTMLElement>;
 }
-export default function Navigation(props: NavigationProps): JSX.Element {
+export default function Navigation(props: NavigationProps): ReactElement {
     const navItems = ["home", "projects", "skills", "about"];
 
     // const myRef = useRef<HTMLDivElement>(null);
